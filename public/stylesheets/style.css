@@ -1,1 +1,12 @@
+.nav.navbar-nav{
+    float: right;
+}
 
+.navbar-brand{
+    font-size: 2em;
+}
+
+.fa.fa-bars{
+   color: white; 
+   font-size: 2em;
+}
