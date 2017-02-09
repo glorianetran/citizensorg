@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1')
     meta(charset="utf-8")
     title= title
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
@@ -12,11 +12,15 @@ html
       .container
         .navbar-header
           a.navbar-brand(href='index.html') citizensOrg
-        ul.nav.navbar-nav
-          li
-            a.i.fa.fa-bars(aria-hidden='true')
+          ul.nav.navbar-nav
+            li
+              a.i.fa.fa-bars(href='#', aria-hidden='true')
     
+  .container        
     block content
+    
+    .footer
+    
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
     

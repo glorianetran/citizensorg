@@ -1,14 +1,16 @@
 .nav.navbar-nav{
     float: right;
+    margin-right: 10px;
 }
 
 .navbar-brand{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .fa.fa-bars{
+   position: relative;        
    color: white; 
-   font-size: 2em;
+   font-size: 1.5em;
 }
 
 .text-vertical-center {
