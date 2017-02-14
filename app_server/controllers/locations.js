@@ -1,6 +1,6 @@
 var request = require('request');
 var apiOptions = {
-  server : "http://localhost:3000"
+  server : "http://localhost:8080"
 };
 if (process.env.NODE_ENV === 'production') {
   apiOptions.server = "https://getting-mean-loc8r.herokuapp.com";
