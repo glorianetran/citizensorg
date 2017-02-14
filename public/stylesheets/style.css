@@ -15,6 +15,18 @@
 
 .text-vertical-center {
     display: table-cell;
-    text-align: center;
+    float: center;
     vertical-align: middle;
+    padding-top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+body{
+background-image: url(http://www.allmacwallpaper.com/get/iMac-21-inch-wallpapers/San-francisco-bay-1920x1080/3025-9.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
 }
