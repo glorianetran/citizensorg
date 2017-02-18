@@ -1,33 +1,65 @@
-.nav.navbar-nav{
-    float: right;
-    
+/*----html, body, container-----*/
+
+.html, .body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+    min-height:100%;
+    position:relative;
+}
+
+/*-----navbar-----*/
+
+.fa.fa-bars{
+   position: relative;        
+   color: white; 
+   font-size: 1.5em;
+   margin-right: 20px;
 }
 
 .navbar-brand{
     font-size: 1.5em;
 }
 
-.fa.fa-bars{
-   position: relative;        
-   color: white; 
-   font-size: 1.5em;
-   float: right;
+/*-----homepage-----*/
+
+.display-3{
+    text-align: center;
+    color: white;
+    margin-top: 10%;
 }
 
-.text-vertical-center {
-    display: table-cell;
-    float: center;
-    vertical-align: middle;
-    padding-top: 50%;
-    margin-left: auto;
-    margin-right: auto;
+.jumbotron{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    background-image: url(http://www.allmacwallpaper.com/get/iMac-21-inch-wallpapers/San-francisco-bay-1920x1080/3025-9.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
 }
 
-
-body{
-background-image: url(http://www.allmacwallpaper.com/get/iMac-21-inch-wallpapers/San-francisco-bay-1920x1080/3025-9.jpg);
-background-repeat: no-repeat;
-background-position: center center;
-background-attachment: fixed;
-background-size: cover;
+.jumbotron h1{
+    color: white;
+    font-family: "Open Sans", bold, sans-serif;
+    font-weight: 600;
 }
+
