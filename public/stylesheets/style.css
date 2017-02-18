@@ -34,9 +34,8 @@
 /*-----homepage-----*/
 
 .display-3{
-    text-align: center;
     color: white;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .jumbotron{
@@ -63,3 +62,6 @@
     font-weight: 600;
 }
 
+.button{
+    margin: 1em;    
+}
