@@ -12,7 +12,7 @@ html
     
     
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top
+   .nav.navbar.navbar-inverse.navbar-fixed-top
       .container-nav
         .navbar-header
         a.navbar-brand(href='home.jade') citizensOrg
@@ -21,13 +21,14 @@ html
             a.i.fa.fa-bars(href='#', aria-hidden='true')
     
     .container
-          block content
+      block content
   
-    br
-    br
-    footer
-      .row
-        .col-xs-12
-        small &copy; CitizensOrg
+    
+      footer
+          .row
+            .col-xs-12
+            small &copy; CitizensOrg
+            
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='javascripts/javascript.js')
