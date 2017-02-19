@@ -155,6 +155,13 @@ module.exports.addReview = function(req, res){
   });
 };
 
+module.exports.login = function(req, res){
+  res.render('logintest', {});
+};
+
+module.exports.register = function(req, res){
+  res.render('registertest', {});
+};
 /* POST 'Add review' page */
 module.exports.doAddReview = function(req, res){
   var requestOptions, path, locationid, postdata;

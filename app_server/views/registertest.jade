@@ -1,0 +1,23 @@
+script(src="/javascripts/angular.min.js")
+script(src="/javascripts/loc8r.js")
+html(ng-app='myApp')
+    body(ng-controller='registerCtrl')    
+        .container
+          page-header(content='pageHeader')
+          .row
+            .col-md-6.col-sm-12
+              form(ng-submit='onSubmit()')
+                .alert.alert-danger(role='alert', ng-show='formError') {{ formError }}
+                .form-group
+                  label(for='name') Full name
+                  input#name.form-control(type='text', placeholder='Enter your name', ng-model='credentials.name')
+                .form-group
+                  label(for='email') Email address
+                  input#email.form-control(type='email', placeholder='Enter email', ng-model='credentials.email')
+                .form-group
+                  label(for='password') Password
+                  input#password.form-control(type='password', placeholder='Password', ng-model='credentials.password')
+                button.btn.btn-default(type='submit') Register!
+          .row
+            .col-md-6.col-sm-12
+              {{ currentUser }}
