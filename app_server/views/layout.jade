@@ -12,8 +12,9 @@ html
     
     
   body
-   .nav.navbar.navbar-inverse.navbar-fixed-top
-      .container-nav
+   script(src="/javascripts/angular.min.js")
+   .navbar.navbar-default.navbar-fixed-top
+      .container
         .navbar-header
         a.navbar-brand(href='/') citizensOrg
         ul.nav.navbar-nav.pull-right
@@ -39,12 +40,17 @@ html
     .container
       block content
   
-    
-      footer
-          .row
+      .row
             .col-xs-12
             small &copy; CitizensOrg
             
+      
+    script(src='/javascripts/jquery-1.11.1.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/javascripts/validation.js')
+    script(src='/javascripts/loc8r.js')
+    
+        
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
     script(src='javascripts/javascript.js')
