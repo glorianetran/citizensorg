@@ -19,6 +19,9 @@ router.get('/register', ctrlMain.register);
 /* GET findyourcongressperson page. */ 
 router.get('/findyourcongressperson', ctrlMain.findyourcongressperson);
 
+/* GET dashboard page. */ 
+router.get('/dashboard', ctrlMain.dashboard);
+
 
 /* GET home page. 
 router.get('/', function(req, res, next) {

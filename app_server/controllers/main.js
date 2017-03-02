@@ -22,3 +22,7 @@ module.exports.login = function (req, res){
 module.exports.findyourcongressperson = function (req, res){
     res.render('findCongress',{title: 'findyourcongressperson'});
 };
+
+module.exports.dashboard = function (req, res){
+    res.render('dashboard',{title: 'dashboard'});
+};
