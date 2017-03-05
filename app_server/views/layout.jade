@@ -18,7 +18,7 @@ html
         a.navbar-brand(href='/') citizensOrg
         ul.nav.navbar-nav.pull-right
           li 
-            a.i.fa.fa-bars(href='#', aria-hidden='true', onclick='openNav()')
+            a.i.fa.fa-bars(id="sidenav", aria-hidden='true', onclick='openNav()')
             #mySidenav.sidenav 
               a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
               a(href='#') About
@@ -43,7 +43,7 @@ html
       footer
           .row
             .col-xs-12
-            small &copy; CitizensOrg
+            small &copy; 
             
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
