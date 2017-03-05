@@ -17,9 +17,24 @@ html
         .navbar-header
         a.navbar-brand(href='/') citizensOrg
         ul.nav.navbar-nav.pull-right
-          li
-            a.i.fa.fa-bars(href='#', aria-hidden='true')
+          li 
+            a.i.fa.fa-bars(href='#', aria-hidden='true', onclick='openNav()')
+            #mySidenav.sidenav 
+              a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+              a(href='#') About
+              a(href='#') Contact
+              a(href='#') Find My CongressPerson
+              a(href='/login') Login
+            script.
+              function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              
+              }
+              function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              }
         
+         
     
     .container
       block content
