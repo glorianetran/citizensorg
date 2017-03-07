@@ -17,10 +17,10 @@ router.get('/login', ctrlMain.login);
 router.get('/register', ctrlMain.register);
 
 /* GET findyourcongressperson page. */ 
-/*router.get('/findyourcongressperson', ctrlMain.findyourcongressperson);
+router.get('/findyourcongressperson', ctrlMain.findyourcongressperson);
 router.post('/findyourcongressperson', ctrlMain.findpost);
 router.get('/findcongressresults/:zipcode', ctrlMain.results);
-*/
+
 /* GET dashboard page. */ 
 router.get('/dashboard', ctrlMain.dashboard);
 
