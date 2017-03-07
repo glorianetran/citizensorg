@@ -5,11 +5,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-<<<<<<< HEAD
-
-var index = require('./app_server/routes/index');
-var users = require('./app_server/routes/users');
-=======
 var passport = require('passport'); 
 require('./app_api/models/db');
 require('./app_api/config/passport'); 
@@ -18,7 +13,9 @@ var routes = require('./app_server/routes/index');
 // var users = require('./app_server/routes/users');
 var routesApi = require('./app_api/routes/index');
 
->>>>>>> e5996dd... additional changes
+
+var index = require('./app_server/routes/index');
+var users = require('./app_server/routes/users');
 
 var app = express();
 
@@ -33,16 +30,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-<<<<<<< HEAD
-
-app.use('/', index);
-app.use('/users', users);
-=======
 app.use(passport.initialize());
 app.use('/', routes);
 app.use('/api', routesApi);
 // app.use('/users', users);
->>>>>>> e5996dd... additional changes
+
+app.use('/', index);
+app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
