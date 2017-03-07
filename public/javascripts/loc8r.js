@@ -1,12 +1,87 @@
 angular.module("myApp", []);
 
 
+function authCtrl($scope, authentication){
+    authCtrl.$inject = ['$scope','authentication'];
+    
+    $scope.currentUser = authentication.currentUser().name;
+    $scope.isLoggedIn = authentication.isLoggedIn();
+    $scope.hi = "hi";
+    $scope.pageHeader = {
+     title: 'Sign in to Loc8r'
+    };
+    $scope.credentials = {
+        email : "",
+        password : ""
+     };
 
+    $scope.onLoginSubmit = function () {
+        $scope.formError = "";
+        if (!$scope.credentials.email || !$scope.credentials.password) {
+            $scope.formError = "All fields required, please try again";
+            return false;
+        } 
+        else {
+            $scope.doLogin();
+        }
+     };
+     
+    $scope.doLogin = function() {
+        $scope.formError = "";
+        authentication
+        .login($scope.credentials)
+        .catch(function(err){
+        $scope.formError = err;
+        })
+        .then(function(){
+
+        });
+    }
+    
+    $scope.formError = authentication.currentUser().name;
+    $scope.pageHeader = {
+     title: 'Sign in to Loc8r'
+    };
+    $scope.regcredentials = {
+        rname: "",
+        remail : "",
+        rpassword : ""
+     };
+
+    $scope.onRegisterSubmit = function () {
+        $scope.formError = "";
+        if (!$scope.regcredentials.remail || !$scope.regcredentials.rpassword) {
+            $scope.formError = "All fields required, please try again";
+            return false;
+        } 
+        else {
+            $scope.doRegister();
+        }
+     };
+     
+    $scope.doRegister = function() {
+        $scope.formError = "";
+        console.log("hi");
+
+        authentication
+        .register($scope.regcredentials)
+        .catch(function(err){
+        $scope.formError = err;
+        })
+        .then(function(data){
+           
+            $scope.currentUser = authentication.currentUser().name;
+
+        });
+        
+    }
+}
 
 
 function loginCtrl($scope, authentication) {
     loginCtrl.$inject = ['$scope','authentication'];
     
+    $scope.currentUser = authentication.currentUser().name;
 
     $scope.hi = "hi";
     $scope.pageHeader = {
@@ -40,53 +115,10 @@ function loginCtrl($scope, authentication) {
         });
  }
 }
-registerCtrl.$inject = ['$scope','authentication'];
 
-function registerCtrl($scope, authentication)
-{
-    $scope.formError = authentication.currentUser().name;
-    $scope.pageHeader = {
-     title: 'Sign in to Loc8r'
-    };
-    $scope.credentials = {
-        name: "",
-        email : "",
-        password : ""
-     };
-
-    $scope.onSubmit = function () {
-        $scope.formError = "";
-        if (!$scope.credentials.email || !$scope.credentials.password) {
-            $scope.formError = "All fields required, please try again";
-            return false;
-        } 
-        else {
-            $scope.doLogin();
-        }
-     };
-     
-    $scope.doLogin = function() {
-        $scope.formError = "";
-        console.log("hi");
-
-        authentication
-        .register($scope.credentials)
-        .catch(function(err){
-        $scope.formError = err;
-        })
-        .then(function(data){
-           
-            $scope.currentUser = authentication.currentUser().name;
-
-        });
-        
     
     
-}
-    
-    
-};
-  
+
 function authentication ($http,$window) {
         authentication.$inject = ['$http','$window'];
         var saveToken = function (token) {
@@ -152,4 +184,4 @@ function authentication ($http,$window) {
  }
 
 
-angular.module("myApp").controller("loginCtrl", loginCtrl).controller("registerCtrl", registerCtrl).service("authentication", authentication)
+angular.module("myApp").controller("authCtrl", authCtrl).service("authentication", authentication)

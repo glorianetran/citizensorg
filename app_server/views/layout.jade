@@ -1,5 +1,6 @@
 doctype html
-html
+html(ng-app='myApp')
+
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1')
     meta(charset='utf-8')
@@ -10,11 +11,10 @@ html
     link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
     
-    
-  body
-   script(src="/javascripts/angular.min.js")
-   .navbar.navbar-default.navbar-fixed-top
-      .container
+ 
+  body(ng-controller='authCtrl')
+   .nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-nav
         .navbar-header
         a.navbar-brand(href='/') citizensOrg
         ul.nav.navbar-nav.pull-right
@@ -25,7 +25,8 @@ html
               a(href='#') About
               a(href='#') Contact
               a(href='#') Find My CongressPerson
-              a(href='/login') Login
+              a(ng-hide='isLoggedIn' href='/login') Login
+              a(ng-show='isLoggedIn' href='/login') {{ currentUser }}
             script.
               function openNav() {
               document.getElementById("mySidenav").style.width = "250px";
@@ -44,7 +45,8 @@ html
             .col-xs-12
             small &copy; CitizensOrg
             
-      
+    script(src="/javascripts/angular.min.js")
+  
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
     script(src='/javascripts/validation.js')

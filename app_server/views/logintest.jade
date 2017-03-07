@@ -5,8 +5,7 @@ html(ng-app='myApp')
     meta(charset='utf-8')
     title Angular binding test
   body(ng-controller='loginCtrl')
-    input(ng-model='hi')
-    h1 Hello {{ hi }}
+    
   .col-md-6.col-sm-8
     form(ng-submit='onSubmit()')
       .alert.alert-danger(role='alert', ng-show='formError') {{ formError }}
