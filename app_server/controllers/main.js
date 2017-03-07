@@ -31,7 +31,7 @@ module.exports.results = function (req, res) {
 	var text = xhr.responseText
 	var textObject = JSON.parse(text);
     var textResult = JSON.stringify(textObject["results"][0]);
-	res.render('findCongressResults', {results: textResult});
+	res.render('findCongressResults', {resultspage: textResult});
 	
     }
 
