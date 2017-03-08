@@ -30,7 +30,23 @@ module.exports.results = function (req, res) {
 	xhr.send();
 	var text = xhr.responseText
 	var textObject = JSON.parse(text);
-    var textResult = JSON.stringify(textObject["results"][0]);
+    var textResult = JSON.stringify(/*"Name: " + textObject["results"][0]["first_name"] + " " + textObject["results"][0]["last_name"] +
+    								" Email: " + textObject["results"][0]["oc_email"] +
+    								" Office: " + textObject["results"][0]["office"] +
+    								" Party: " + textObject["results"][0]["party"] +
+									" State: " + textObject["results"][0]["state"] +
+									" Twitter: " + textObject["results"][0]["twitter_id"] +
+									" Website: " + textObject["results"][0]["website"] +
+									" YouTube: " + textObject["results"][0]["youtube_id"]*/
+									{Name: textObject["results"][0]["first_name"] + " " + textObject["results"][0]["last_name"],
+    								Email: textObject["results"][0]["oc_email"],
+    								Office: textObject["results"][0]["office"],
+    								Party: textObject["results"][0]["party"],
+									State: textObject["results"][0]["state"],
+									Twitter: textObject["results"][0]["twitter_id"],
+									Website: textObject["results"][0]["website"],
+									YouTube: textObject["results"][0]["youtube_id"]}, null, '\t'
+    					);
 	res.render('findCongressResults', {resultspage: textResult});
 	
     }
