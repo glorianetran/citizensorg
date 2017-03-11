@@ -1,13 +1,17 @@
 /*----html, body, container-----*/
 
-.html, .body{
+html, body{
+    height: 100vh;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     margin:0;
     padding:0;
+    
 }
 
-.body{
+body{
+    background-color: #f1f1f1;
+    height: 100%;
     margin: 0;
     padding: 0;
     width: 100%; /* full window width */
@@ -56,20 +60,31 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
     -webkit-transition-delay: 9999s;
-}      
+}  
+
+/*--------------typography---------------*/
+
+h1      { font-size: 1.4em;       /* 2*16 = 32 */         }
+h2      { font-size: 1.2em;     /* 1.5*16 = 24 */       }
+h3      { font-size: 1em;    /* 1.17*16 = 18.72 */   }
+h4      { font-size: .9em;       /* 1*16 = 16 */         }
+h5      { font-size: .6em;    /* 0.83*16 = 13.28 */   }
+h6      { font-size: .4em;    /* 0.75*16 = 12 */      }
+p  { font-size: .75em;    /* 0.75*16 = 12 */      }
 
 
-/*-----navbar-----*/
+
+
+/*--------------navbar---------------*/
 
 .fa.fa-bars{
    position: relative;        
    color: white; 
-   font-size: 1.5em;
-   
+   font-size: 1em;
 }
 
 .navbar-brand{
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 
@@ -113,7 +128,7 @@ input:-webkit-autofill:active {
   .sidenav a {font-size: 18px;}
 }
 
-/*-----homepage-----*/
+/*----------------homepage---------------*/
 
 .button{
     box-shadow: 2px 2px 8px #595959;
@@ -180,7 +195,7 @@ input:-webkit-autofill:active {
     margin-top: .75em;  
 }
 
-/* Login and Sign Up*/
+/*------------------ Login and Sign Up-----------------*/
 
 .panel-login {
     background-color: #eef3f7;
@@ -240,7 +255,6 @@ input:-webkit-autofill:active {
 	outline: none;
 	background-color: #ce0000;
     color: #fff;
-	color: #fff;
 	font-size: 14px;
 	height: auto;
 	font-weight: normal;
@@ -298,3 +312,26 @@ input:-webkit-autofill:active {
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
+
+/*--------------------dashboard--------------------*/
+
+.row.list-action{
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.list-action-item {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: -1px;
+    background-color: #eef3f7;
+    border: 5px solid #fff;
+}
+
+ #banner.page-header{
+     text-align: center;
+ }
+ 
+ 

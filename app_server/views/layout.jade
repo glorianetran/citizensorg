@@ -15,15 +15,15 @@ html
    .nav.navbar.navbar-inverse.navbar-fixed-top
       .container-nav
         .navbar-header
-        a.navbar-brand(href='/') citizensOrg
+        a.navbar-brand(href='/') CitizensOrg
         ul.nav.navbar-nav.pull-right
           li 
             a.i.fa.fa-bars(id="sidenav", aria-hidden='true', onclick='openNav()')
             #mySidenav.sidenav 
               a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
-              a(href='#') About
+              a(href='/about') About
               a(href='#') Contact
-              a(href='#') Find My CongressPerson
+              a(href='/findyourcongressperson') Find Your CongressPerson
               a(href='/login') Login
             script.
               function openNav() {
@@ -43,7 +43,6 @@ html
       footer
           .row
             .col-xs-12
-            small &copy; 
             
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
