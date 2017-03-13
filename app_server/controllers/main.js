@@ -31,39 +31,18 @@ module.exports.results = function (req, res) {
 	var text = xhr.responseText;
 	var textObject = JSON.parse(text);
 	
-    // var textResult = JSON.stringify(textObject["results"]);
-    // var resultsArray = [];
-    // for (var i = 0; i < textObject["results"].length; i++) {
-    // 	resultsArray.push(JSON.stringify(textObject["results"][i]));
-    // }
-    /*"Name: " + textObject["results"][0]["first_name"] + " " + textObject["results"][0]["last_name"] +
-    								" Email: " + textObject["results"][0]["oc_email"] +
-    								" Office: " + textObject["results"][0]["office"] +
-    								" Party: " + textObject["results"][0]["party"] +
-									" State: " + textObject["results"][0]["state"] +
-									" Twitter: " + textObject["results"][0]["twitter_id"] +
-									" Website: " + textObject["results"][0]["website"] +
-									" YouTube: " + textObject["results"][0]["youtube_id"]*/
-									// {Name: textObject["results"][0]["first_name"] + " " + textObject["results"][0]["last_name"],
-    					// 			Email: textObject["results"][0]["oc_email"],
-    					// 			Office: textObject["results"][0]["office"],
-    					// 			Party: textObject["results"][0]["party"],
-									// State: textObject["results"][0]["state"],
-									// Twitter: textObject["results"][0]["twitter_id"],
-									// Website: textObject["results"][0]["website"],
-									// YouTube: textObject["results"][0]["youtube_id"]}, null, '\t'
-    					// );
-    // for (var i = 0; i < textObject["results"].length; i++) {
-    // 	res.render('findCongressResults', {resultspage: textObject["results"]});
-    // }
-    
-	// jQuery.each(textObject["results"], function() {
- //   	res.render('findCongressResults', {resultspage: textObject["name"]});	
- //   });
+    var textResult = JSON.stringify({Name: textObject["results"][0]["first_name"] + " " + textObject["results"][0]["last_name"],
+    								Email: textObject["results"][0]["oc_email"],
+    								Office: textObject["results"][0]["office"],
+    								Party: textObject["results"][0]["party"],
+									State: textObject["results"][0]["state"],
+									Twitter: textObject["results"][0]["twitter_id"],
+									Website: textObject["results"][0]["website"],
+									YouTube: textObject["results"][0]["youtube_id"]}, null, '\t'
+    					 );
     
     
-    
-	res.render('findCongressResults', {resultspage: textObject});
+	res.render('findCongressResults', {resultspage: textResult});
     }
 
 module.exports.findpost = function(req, res)
