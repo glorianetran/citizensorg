@@ -26,7 +26,7 @@ html, body{
 body{
     background-color: #f1f1f1;
     height: 100%;
-    margin: 0;
+    margin: 5px;
     padding: 0;
     width: 100%; /* full window width */
 }
