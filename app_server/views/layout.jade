@@ -22,13 +22,13 @@ html
             #mySidenav.sidenav 
               a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
               a(href='/about') About
-              a(href='#') Contact
               a(href='/findyourcongressperson') Find Your CongressPerson
               a(href='/login') Login
+              a(href='/login') Logout
+              
             script.
               function openNav() {
               document.getElementById("mySidenav").style.width = "250px";
-              
               }
               function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
