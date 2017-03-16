@@ -500,13 +500,14 @@ small.text-muted {
     margin-top: 30px;
 }
 
-#main.column.col-sm-9 {
+#main.column.col-sm-6 {
     background-color: #eef3f7;
 }
  
 .col-sm-9.full {
     width: 100%;
     background-color: white;
+    margin-top: 20px;
 }
 
 hr {
