@@ -331,6 +331,7 @@ p  { font-size: .75em;    /* 0.75*16 = 12 */      }
     transition: all 0.4s ease 0s;
 }
 
+<<<<<<< HEAD
 /*--------------------dashboard--------------------*/
  
 
@@ -517,3 +518,49 @@ hr {
     width: 100%;
 }
 
+=======
+
+.row {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+img {
+    vertical-align: middle;
+    float: left;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: fixed;
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container-margin {
+    margin-left: 50px;
+    margin-right:50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.img-size{
+    height: 200px;
+    width: 200px;
+}
+>>>>>>> 2849c46b791c1d56eb4e5d972c041659139f4f5f
