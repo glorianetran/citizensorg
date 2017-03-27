@@ -52,7 +52,7 @@ module.exports.results = function (req, res) {
 									Twitter: textObject["results"][i]["twitter_id"],
 									Website: textObject["results"][i]["website"],
 									YouTube: textObject["results"][i]["youtube_id"]}, null, "\t");
-			 textResult += "br";
+			textResult += "br";
     }
     
     
