@@ -31,15 +31,30 @@ module.exports.results = function (req, res) {
 	var text = xhr.responseText;
 	var textObject = JSON.parse(text);
 	
-    var textResult = JSON.stringify({Name: textObject["results"][0]["first_name"] + " " + textObject["results"][0]["last_name"],
-    								Email: textObject["results"][0]["oc_email"],
-    								Office: textObject["results"][0]["office"],
-    								Party: textObject["results"][0]["party"],
-									State: textObject["results"][0]["state"],
-									Twitter: textObject["results"][0]["twitter_id"],
-									Website: textObject["results"][0]["website"],
-									YouTube: textObject["results"][0]["youtube_id"]}, null, '\t'
-    					 );
+    // var textResult = JSON.stringify({Name: textObject["results"][0]["first_name"] + " " + textObject["results"][0]["last_name"],
+    // 								Email: textObject["results"][0]["oc_email"],
+    // 								Office: textObject["results"][0]["office"],
+    // 								Party: textObject["results"][0]["party"],
+				// 					State: textObject["results"][0]["state"],
+				// 					Twitter: textObject["results"][0]["twitter_id"],
+				// 					Website: textObject["results"][0]["website"],
+				// 					YouTube: textObject["results"][0]["youtube_id"]}, null, '\t'
+    // 					 );
+    
+    var textResult = "";
+    
+    for(var i = 0; i < textObject["results"].length; i++) {
+    		textResult += JSON.stringify({Name: textObject["results"][i]["first_name"] + " " + textObject["results"][i]["last_name"],
+    								Email: textObject["results"][i]["oc_email"],
+    								Office: textObject["results"][i]["office"],
+    								Party: textObject["results"][i]["party"],
+									State: textObject["results"][i]["state"],
+									Twitter: textObject["results"][i]["twitter_id"],
+									Website: textObject["results"][i]["website"],
+									YouTube: textObject["results"][i]["youtube_id"]}, null, "\t");
+			 textResult += "br";
+    }
+    
     
     
 	res.render('findCongressResults', {resultspage: textResult});

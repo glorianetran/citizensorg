@@ -1,19 +1,13 @@
-extend layout
+extends layout
 
-<<<<<<< HEAD
+h1 find congress person page
+
 block content
-
-  h1 find congress person page
-  
-  body
-    form(action='/action_page.php')
-=======
-body
-  form(action='/findyourcongressperson' method="post")
->>>>>>> 2849c46b791c1d56eb4e5d972c041659139f4f5f
-    | Enter Zip Code:
     br
-    input(type='text', name='zipcode', value='94606')
-    br
-    br
-    input(type='submit')
+    form(action='/findyourcongressperson' method="post")
+      | Enter Zip Code:
+      br
+      input(type='text', name='zipcode', value='94606')
+      br
+      br
+      input(type='submit')
