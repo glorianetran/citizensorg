@@ -41,23 +41,23 @@ module.exports.results = function (req, res) {
 				// 					YouTube: textObject["results"][0]["youtube_id"]}, null, '\t'
     // 					 );
     
-    var textResult = "";
     
+    var textArray = [];
     for(var i = 0; i < textObject["results"].length; i++) {
-    		textResult += JSON.stringify({Name: textObject["results"][i]["first_name"] + " " + textObject["results"][i]["last_name"],
+    		var textResult = {Name: textObject["results"][i]["first_name"] + " " + textObject["results"][i]["last_name"],
     								Email: textObject["results"][i]["oc_email"],
     								Office: textObject["results"][i]["office"],
     								Party: textObject["results"][i]["party"],
 									State: textObject["results"][i]["state"],
 									Twitter: textObject["results"][i]["twitter_id"],
 									Website: textObject["results"][i]["website"],
-									YouTube: textObject["results"][i]["youtube_id"]}, null, "\t");
-			textResult += "br";
-    }
+									YouTube: textObject["results"][i]["youtube_id"]};
+			textArray.push(textResult);
+	}
     
     
     
-	res.render('findCongressResults', {resultspage: textResult});
+	res.render('findCongressResults', {resultspage: textArray});
     }
 
 module.exports.findpost = function(req, res)
