@@ -29,22 +29,23 @@ block content
                 .page-header1.text-muted
                   | Action Items
               // /top story
-              
-              .row
-                .col-sm-10
-                  h3 Letter Writing
-                  h4
-                    span.label.label-default Raymond Thai
-                  h4
-                    small.text-muted
-                      | 1 hour ago • 
-                      a.text-muted(href='#') Read More
-                .col-sm-2
-                  a.pull-right(href='#')
-                    img.img-circle(src='http://api.randomuser.me/portraits/thumb/men/19.jpg')
-              .row.divider
-                .col-sm-12
-                  hr      
+              each item in actionArray
+                .row
+                  .col-sm-10
+                    h3= item.action
+                    h4
+                      span.label.label-default= item.name
+                    h4
+                      small.text-muted
+                        | 1 hour ago 
+                        a.text-muted(href='#') Read More
+                  .col-sm-2
+                    a.pull-right(href='#')
+                      img.img-circle(src='http://api.randomuser.me/portraits/thumb/men/19.jpg')
+                .row.divider
+                  .col-sm-12
+                    hr
+               
                     
             
               

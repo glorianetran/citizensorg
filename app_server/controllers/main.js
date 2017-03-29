@@ -52,7 +52,7 @@ module.exports.results = function (req, res) {
 									Twitter: textObject["results"][i]["twitter_id"],
 									Website: textObject["results"][i]["website"],
 									YouTube: textObject["results"][i]["youtube_id"]};
-			textArray.push(textResult);
+			textArray.push(JSON.stringify(textResult));
 	}
     
     
@@ -68,5 +68,5 @@ module.exports.findpost = function(req, res)
 }
 
 module.exports.dashboard = function (req, res){
-    res.render('dashboard',{title: 'dashboard'});
+    res.render('dashboard',{title: 'dashboard', actionArray: [{name: "James Wang", action: "Eating"}]});
 };
