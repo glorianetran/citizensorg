@@ -2,7 +2,7 @@
 // module.exports.index = function (req, res){
 //     res.render('index',{title: 'CitizensOrg'});
 // };
-
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 module.exports.homepage = function (req, res){
     res.render('homepage',{title: 'CitizensOrg'});
 };
@@ -20,9 +20,53 @@ module.exports.login = function (req, res){
 };
 
 module.exports.findyourcongressperson = function (req, res){
-    res.render('findCongress',{title: 'findyourcongressperson'});
+    res.render('findCongress', {title: 'findyourcongressperson'});
 };
 
+module.exports.results = function (req, res) {
+	var apiurl = "https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + req.params.zipcode;
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', apiurl, false);
+	xhr.send();
+	var text = xhr.responseText;
+	var textObject = JSON.parse(text);
+	
+    // var textResult = JSON.stringify({Name: textObject["results"][0]["first_name"] + " " + textObject["results"][0]["last_name"],
+    // 								Email: textObject["results"][0]["oc_email"],
+    // 								Office: textObject["results"][0]["office"],
+    // 								Party: textObject["results"][0]["party"],
+				// 					State: textObject["results"][0]["state"],
+				// 					Twitter: textObject["results"][0]["twitter_id"],
+				// 					Website: textObject["results"][0]["website"],
+				// 					YouTube: textObject["results"][0]["youtube_id"]}, null, '\t'
+    // 					 );
+    
+    
+    var textArray = [];
+    for(var i = 0; i < textObject["results"].length; i++) {
+    		var textResult = {Name: textObject["results"][i]["first_name"] + " " + textObject["results"][i]["last_name"],
+    								Email: textObject["results"][i]["oc_email"],
+    								Office: textObject["results"][i]["office"],
+    								Party: textObject["results"][i]["party"],
+									State: textObject["results"][i]["state"],
+									Twitter: textObject["results"][i]["twitter_id"],
+									Website: textObject["results"][i]["website"],
+									YouTube: textObject["results"][i]["youtube_id"]};
+			textArray.push(JSON.stringify(textResult));
+	}
+    
+    
+    
+	res.render('findCongressResults', {resultspage: textArray});
+    }
+
+module.exports.findpost = function(req, res)
+{	
+	var zipcode = req.body.zipcode;
+	var url = "/findCongressResults/" + zipcode
+	res.redirect(url);
+}
+
 module.exports.dashboard = function (req, res){
-    res.render('dashboard',{title: 'dashboard'});
+    res.render('dashboard',{title: 'dashboard', actionArray: [{name: "James Wang", action: "Eating"}]});
 };

@@ -16,7 +16,7 @@ html(ng-app='myApp')
    .nav.navbar.navbar-inverse.navbar-fixed-top
       .container-nav
         .navbar-header
-        a.navbar-brand(href='/') citizensOrg
+        a.navbar-brand(href='/') CitizensOrg
         ul.nav.navbar-nav.pull-right
           li 
             a.i.fa.fa-bars(id="sidenav", aria-hidden='true', onclick='openNav()')
@@ -30,7 +30,6 @@ html(ng-app='myApp')
             script.
               function openNav() {
               document.getElementById("mySidenav").style.width = "250px";
-              
               }
               function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
@@ -43,7 +42,6 @@ html(ng-app='myApp')
   
       .row
             .col-xs-12
-            small &copy; CitizensOrg
             
     script(src="/javascripts/angular.min.js")
   
