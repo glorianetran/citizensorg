@@ -1,0 +1,12 @@
+extends layout
+
+block content
+      br
+      form(action='/actionpost', method='post')
+        | Name: 
+        input(type='text', name='name')
+        br
+        | Action: 
+        input(type='text', name='action')
+        br
+        input(type='submit', value='Submit')

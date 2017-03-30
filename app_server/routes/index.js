@@ -31,7 +31,8 @@ router.get('/', function(req, res, next) {
 router.get('/login', ctrlLocations.login);
 router.get('/register', ctrlLocations.register);
 /* Other pages */
-
+router.get('/actionget', ctrlMain.actionform);
+router.post('/actionpost', ctrlMain.actionpost);
 
 
 module.exports = router;

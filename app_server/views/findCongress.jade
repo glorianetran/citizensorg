@@ -3,11 +3,13 @@ extends layout
 h1 find congress person page
 
 block content
-    br
-    form(action='/findyourcongressperson' method="post")
-      | Enter Zip Code:
+  .wrapper
+    .box
       br
-      input(type='text', name='zipcode', value='94606')
-      br
-      br
-      input(type='submit')
+      form(action='/findyourcongressperson' method="post")
+        | Enter Zip Code:
+        br
+        input(type='text', name='zipcode', value='94606')
+        br
+        br
+        input(type='submit')

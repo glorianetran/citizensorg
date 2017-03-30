@@ -2,6 +2,10 @@
 // module.exports.index = function (req, res){
 //     res.render('index',{title: 'CitizensOrg'});
 // };
+
+var mongoose = require('mongoose');
+var Action = mongoose.model('Action');
+
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 module.exports.homepage = function (req, res){
     res.render('homepage',{title: 'CitizensOrg'});
@@ -68,5 +72,34 @@ module.exports.findpost = function(req, res)
 }
 
 module.exports.dashboard = function (req, res){
-    res.render('dashboard',{title: 'dashboard', actionArray: [{name: "James Wang", action: "Eating"}]});
+
+		
+	Action.find({}, function(err, data)
+	{
+		var results = []
+		results = data.reverse().slice(0, 5);
+		res.render('dashboard',{title: 'dashboard', actionArray: results});
+	});
+
+    
 };
+
+
+module.exports.actionform = function(req, res)
+{
+	res.render('actionpost', {});
+}
+
+module.exports.actionpost = function(req,res)
+{
+	Action.create({name: req.body.name, action: req.body.action}, function(err, data)
+	{
+		if (err) {
+			res.redirect('/actionpost');
+		}
+		else
+		{
+			res.redirect('/dashboard');
+		}
+	})
+}
