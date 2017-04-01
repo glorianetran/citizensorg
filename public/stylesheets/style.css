@@ -315,23 +315,7 @@ p  { font-size: .75em;    /* 0.75*16 = 12 */      }
 }
 
 
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    right: 0;
-    width: 250px;
-    height: 100%;
-    transform: translateX(250px);
-    overflow-y: hidden;
-    background: #222;
-    -webkit-transition: all 0.4s ease 0s;
-    -moz-transition: all 0.4s ease 0s;
-    -ms-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-}
 
-<<<<<<< HEAD
 /*--------------------dashboard--------------------*/
  
 
@@ -428,16 +412,18 @@ a {
   #sidebar,#sidebar a.logo {
     text-align:center;
     margin:0 auto;
-    margin-top:30px;
-    font-size:26px;
+    margin-top:0em;
+    font-size:2em;
   }
   #sidebar a.logo {
-    font-size:50px;
+    font-size:3em;
     height:75px;
     width:75px;
     margin-bottom:30px;
   }
 }
+
+
 
 .column .padding {
     padding: 8px;
@@ -501,7 +487,7 @@ small.text-muted {
     margin-top: 30px;
 }
 
-#main.column.col-sm-6 {
+#main.column.col-sm-8 {
     background-color: #eef3f7;
 }
  
@@ -519,12 +505,10 @@ hr {
     width: 100%;
 }
 
-<<<<<<< HEAD
-=======
 
 .row {
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 img {
@@ -565,8 +549,7 @@ img {
     height: 200px;
     width: 200px;
 }
->>>>>>> 2849c46b791c1d56eb4e5d972c041659139f4f5f
-=======
+
 .row.divider{
     margin: 5px;
 }
@@ -574,4 +557,19 @@ img {
 .col-sm-4.text-center{
     margin-bottom: 50px;
 }
->>>>>>> dashboard
+
+#post.col-sm-12{
+    padding-top: 3%;
+}
+
+#actions.col-sm-12{
+    padding-top: .5%;
+}
+
+#sidebar .nav{
+    margin-top: 20%;
+}
+
+#sidebar.column{
+    padding-top: 5%;
+}
