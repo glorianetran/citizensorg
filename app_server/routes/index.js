@@ -12,6 +12,9 @@ router.get('/', ctrlMain.homepage);
 router.get('/about', ctrlMain.about);
 
 
+/* GET calendar page */
+router.get('/calendar', ctrlMain.calendar);
+
 /* GET findyourcongressperson page. */ 
 router.get('/findyourcongressperson', ctrlMain.findyourcongressperson);
 router.post('/findyourcongressperson', ctrlMain.findpost);

@@ -5,17 +5,19 @@ block content
       .box
        .row
         // sidebar
-        #sidebar.column.col-sm-2
+        #sidebar.column.col-sm-3.col-xs-12
           ul.nav
             li.active
               a(href='/actionget') Post Action
             li
               a(href='#actions') Action Items
+            li
+              a(href='/calendar') Calendar
           ul#sidebar-footer.nav.hidden-xs
             
         // /sidebar
         // main
-        #main.column.col-sm-6
+        #main.column.col-sm-8.col-xs-12
           .padding
             .full.col-sm-9
               // content
@@ -26,7 +28,7 @@ block content
                     i.fa.fa-plus(aria-hidden='true')
               
               #actions.col-sm-12
-                .page-header1.text-muted
+                .page-header1.text-muted.divider
                   | Action Items
               // /top story
               each item in actionArray
@@ -66,11 +68,13 @@ block content
                     img.img-respsonsive.img-circle(src='//placehold.it/400/f0f0f0')
               
                   
-        #calendar.column.col-sm-4
-          .row
-            .col-sm-12
-              br
-              iframe(src='https://calendar.google.com/calendar/embed?src=mills.edu_4bq72al4hsjup00sn9gqjsieic%40group.calendar.google.com&ctz=America/Los_Angeles', style='border: 0', width='500', height='500', frameborder='0', scrolling='no')
+        //#calendar.column.col-sm-4
+          //.row
+            //.col-sm-12
+              //br
+              //iframe(src='https://calendar.google.com/calendar/embed?src=mills.edu_4bq72al4hsjup00sn9gqjsieic%40group.calendar.google.com&ctz=America/Los_Angeles', style='border: 0', width='500', height='500', frameborder='0', scrolling='no')
             // /col-9
           // /padding
         // /main
+
+        
