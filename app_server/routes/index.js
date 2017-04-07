@@ -16,6 +16,9 @@ router.get('/login', ctrlMain.login);
 /* GET register page. */ 
 router.get('/register', ctrlMain.register);
 
+/* GET calendar page */
+router.get('/calendar', ctrlMain.calendar);
+
 /* GET findyourcongressperson page. */ 
 router.get('/findyourcongressperson', ctrlMain.findyourcongressperson);
 router.post('/findyourcongressperson', ctrlMain.findpost);

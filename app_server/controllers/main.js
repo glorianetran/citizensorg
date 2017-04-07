@@ -19,6 +19,10 @@ module.exports.login = function (req, res){
     res.render('login',{title: 'Login'});
 };
 
+module.exports.calendar = function (req, res){
+    res.render('calendar',{title: 'Calendar'});
+};
+
 module.exports.findyourcongressperson = function (req, res){
     res.render('findCongress', {title: 'findyourcongressperson'});
 };
