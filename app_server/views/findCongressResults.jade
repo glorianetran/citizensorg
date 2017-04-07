@@ -1,9 +1,28 @@
 //h1 find congress person results refer to main.js
 
 each item in resultspage
-    span=item
-    //span=#{item.Name}
+    // span=item
+    // span=#{item.Name}
+    
+    span Name: #{JSON.stringify(item.Name).replace("\"", "").replace("\"", "")}
     br
+    span Email: #{JSON.stringify(item.Email).replace("\"", "").replace("\"", "")}
+    br
+    span Office: #{JSON.stringify(item.Office).replace("\"", "").replace("\"", "")}
+    br
+    span Party: #{JSON.stringify(item.Party).replace("\"", "").replace("\"", "")}
+    br
+    span State: #{JSON.stringify(item.State).replace("\"", "").replace("\"", "")}
+    br
+    if item.Twitter
+        span Twitter: @#{JSON.stringify(item.Twitter).replace("\"", "").replace("\"", "")}
+        br
+    if item.Website
+        span Website: #{JSON.stringify(item.Website).replace("\"", "").replace("\"", "")}
+        br
+    if item.YouTube
+        span Youtube: #{JSON.stringify(item.YouTube).replace("\"", "").replace("\"", "")}
+        br
 
     br
 
