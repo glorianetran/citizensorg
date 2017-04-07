@@ -13,37 +13,38 @@ html(ng-app='myApp')
     
  
   body(ng-controller='authCtrl')
-   .nav.navbar.navbar-inverse.navbar-fixed-top
+   av.navbar.navbar-inverse.navbar-fixed-top
       .container-nav
         .navbar-header
-        a.navbar-brand(href='/') CitizensOrg
-        ul.nav.navbar-nav.pull-right
-          li 
-            a.i.fa.fa-bars(id="sidenav", aria-hidden='true', onclick='openNav()')
-            #mySidenav.sidenav 
-              a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
-              a(href='#') About
-              a(href='#') Contact
-              a(href='#') Find My CongressPerson
-              a(ng-hide='isLoggedIn' href='/login') Login
-              a(ng-show='isLoggedIn' href='/login') {{ currentUser }}
-            script.
-              function openNav() {
-              document.getElementById("mySidenav").style.width = "250px";
-              }
-              function closeNav() {
-              document.getElementById("mySidenav").style.width = "0";
-              }
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') CitizensOrg
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/dashboard') Dashboard
+            li
+              a(href='/findCongress') CongressPerson
+            li
+              a(href='/about') About
+            li
+               a(ng-hide='isLoggedIn' href='/login') Login
+               a(ng-show='isLoggedIn' href='/login') {{ currentUser }}
         
-         
+        
+        
+  
     
     .container
       block content
   
 
-      footer
-          .row
-            .col-lg-12.col-xs-12
+      block footer
+        footer
+          p#copyright © 2017 CitizensOrg. All rights reserved. 
 
             
     script(src="/javascripts/angular.min.js")
