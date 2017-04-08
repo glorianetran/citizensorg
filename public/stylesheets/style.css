@@ -24,6 +24,7 @@ html, body{
 }
 
 body{
+    font-family: "Open Sans", sans-serif;
     background-color: #f1f1f1;
     height: 100%;
     margin: 0;
@@ -307,6 +308,10 @@ p  { font-size: .75em;    /* 0.75*16 = 12 */      }
 h1,h2,h3 {
    font-weight:800;
    font-family:'Open Sans',arial,sans-serif;
+}
+
+.h2{
+    font-family: "Sans Pro", sans-serif;
 }
 
 .jumbotron {
