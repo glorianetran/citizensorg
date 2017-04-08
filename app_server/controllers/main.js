@@ -38,17 +38,6 @@ module.exports.results = function (req, res) {
 	xhr.send();
 	var text = xhr.responseText;
 	var textObject = JSON.parse(text);
-	
-    // var textResult = JSON.stringify({Name: textObject["results"][0]["first_name"] + " " + textObject["results"][0]["last_name"],
-    // 								Email: textObject["results"][0]["oc_email"],
-    // 								Office: textObject["results"][0]["office"],
-    // 								Party: textObject["results"][0]["party"],
-				// 					State: textObject["results"][0]["state"],
-				// 					Twitter: textObject["results"][0]["twitter_id"],
-				// 					Website: textObject["results"][0]["website"],
-				// 					YouTube: textObject["results"][0]["youtube_id"]}, null, '\t'
-    // 					 );
-    
     
     var textArray = [];
     for(var i = 0; i < textObject["results"].length; i++) {
@@ -60,7 +49,7 @@ module.exports.results = function (req, res) {
 									Twitter: textObject["results"][i]["twitter_id"],
 									Website: textObject["results"][i]["website"],
 									YouTube: textObject["results"][i]["youtube_id"]};
-			textArray.push(JSON.stringify(textResult));
+			textArray.push(textResult);
 	}
     
     
