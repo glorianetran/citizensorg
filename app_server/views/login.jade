@@ -14,10 +14,11 @@ script(src="/javascripts/loc8r.js")
                   .col-xs-6
                     a#register-form-link(href='#') Sign Up
               
-              .panel-body
+              .panel-body(ng-cloak)
                 .row
                   .col-lg-12
-                    h2.ng-cloak Hey, {{ currentUser }}
+                    h2 Hey, {{currentUser}}
+                 
                     
                     form#login-form(ng-submit='onLoginSubmit()' style='display: block;')
                       .form-group

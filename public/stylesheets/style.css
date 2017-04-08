@@ -100,8 +100,13 @@ p.lead{
 
 /*--------------navbar---------------*/
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+.ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+.nav>li {
+    position: relative;
+    display: -webkit-inline-box;
 }
 
 .fa.fa-bars{
