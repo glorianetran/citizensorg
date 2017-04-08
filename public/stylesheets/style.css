@@ -25,7 +25,7 @@ html, body{
 
 body{
     font-family: "Open Sans", sans-serif;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -77,13 +77,13 @@ input:-webkit-autofill:active {
 
 /*--------------typography---------------*/
 
-h1      { font-size: 1.4em;       /* 2*16 = 32 */         }
-h2      { font-size: 1.2em;     /* 1.5*16 = 24 */       }
-h3      { font-size: 1em;    /* 1.17*16 = 18.72 */   }
-h4      { font-size: .9em;       /* 1*16 = 16 */         }
-h5      { font-size: .6em;    /* 0.83*16 = 13.28 */   }
-h6      { font-size: .4em;    /* 0.75*16 = 12 */      }
-p  { font-size: .75em;    /* 0.75*16 = 12 */      }
+h1      { font-size: 1.4em;       /* 2*16 = 32 */  font-family: "Roboto", sans-serif;  letter-spacing: 2px;    }
+h2      { font-size: 1.2em;     /* 1.5*16 = 24 */  font-family: "Roboto", sans-serif;  letter-spacing: 1.33px;   }
+h3      { font-size: 1em;    /* 1.17*16 = 18.72 */ font-family: "Roboto", sans-serif; letter-spacing: 1.25px;  }
+h4      { font-size: .9em;       /* 1*16 = 16 */    font-family: "Roboto", sans-serif; letter-spacing: 1px;    }
+h5      { font-size: .6em;    /* 0.83*16 = 13.28 */ font-family: "Sans Pro", sans-serif; letter-spacing: 1px; }
+h6      { font-size: .4em;    /* 0.75*16 = 12 */    font-family: "Sans Pro", sans-serif; letter-spacing: 1px; }
+p  { font-size: .75em;    /* 0.75*16 = 12 */     font-family: "Sans Pro", sans-serif; letter-spacing: 1px;}
 
 
 .fa.fa-plus{
@@ -514,7 +514,7 @@ hr {
 
 img {
     vertical-align: middle;
-    float: left;
+    float: center;
 }
 
 .img-circle {
@@ -527,8 +527,9 @@ img {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  max-width: 100%;
-  height: fixed;
+  max-width: 95%;
+  height: 8em;
+  width: 8em;
 }
 
 .img-center {
@@ -558,6 +559,14 @@ img {
 .col-sm-4.text-center{
     margin-bottom: 50px;
 }
+
+.page-header3{
+    margin-top: 1em;
+    padding-bottom: .25em;
+    margin-bottom: 1em;
+    border-bottom:2px solid #9CAAC6;
+}
+
 
 #post{
     padding-top: 5%;
