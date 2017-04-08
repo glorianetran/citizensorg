@@ -13,7 +13,7 @@ html(ng-app='myApp')
     
  
   body(ng-controller='authCtrl')
-   av.navbar.navbar-inverse.navbar-fixed-top
+   nav.navbar.navbar-inverse.navbar-fixed-top
       .container-nav
         .navbar-header
           button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
@@ -25,26 +25,26 @@ html(ng-app='myApp')
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
             li
-              a(href='/dashboard') Dashboard
+              a(href='/dashboard') Organize
             li
-              a(href='/findCongress') CongressPerson
+              a(href='/findyourcongressperson') CongressPerson
             li
               a(href='/about') About
             li
-               a(ng-hide='isLoggedIn' href='/login') Login
-               a(ng-show='isLoggedIn' href='/login') {{ currentUser }}
+              a(ng-hide='isLoggedIn' href='/login') Login
+              a.ng-cloak(ng-show='isLoggedIn' href='/login') {{ currentUser }}
         
+          
         
-        
-  
+         
     
     .container
       block content
   
 
-      block footer
-        footer
-          p#copyright © 2017 CitizensOrg. All rights reserved. 
+      footer
+          .row
+            .col-lg-12.col-xs-12
 
             
     script(src="/javascripts/angular.min.js")

@@ -41,28 +41,28 @@ body{
 
 @media screen and (max-width: 767px) {
     body {
-        font-size: 0.8em;
+        font-size: 1.2em;
     }
 }
 
 /* sm */
 @media screen and (min-width: 768px) {
     body {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 }
 
 /* md */
 @media screen and (min-width: 992px) {
     body {
-        font-size: 1.4em;
+        font-size: 1.8em;
     }
 }
 
 /* lg */
 @media screen and (min-width: 1200px) {
     body {
-        font-size: 1.6em;
+        font-size: 2em;
     }
 }
 
@@ -95,6 +95,10 @@ p  { font-size: .75em;    /* 0.75*16 = 12 */      }
 
 /*--------------navbar---------------*/
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 .fa.fa-bars{
    position: relative;        
    color: white; 
@@ -105,54 +109,12 @@ p  { font-size: .75em;    /* 0.75*16 = 12 */      }
     font-size: 1em;
 }
 
-
-/*.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    right: 0;
-    z-index: 1;
-    top: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    font-family: "Montserrat", sans-serif;
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-*/
 .navbar.navbar-inverse.navbar-fixed-top{
     display: inline;
-    margin-bottom: 0;
 }
 
 .navbar-brand{
-    font-family: "Futura", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin-left: 30px;
     font-size: 26px;
     font-weight:500;
@@ -170,7 +132,7 @@ p  { font-size: .75em;    /* 0.75*16 = 12 */      }
 }
 
 .nav.navbar-nav{
-    font-family: "Futura", sans-serif;
+    font-family: "Sans Pro", sans-serif;
     float: right;
     font-size: 16px;
 }
@@ -200,11 +162,6 @@ p  { font-size: .75em;    /* 0.75*16 = 12 */      }
     border-color: #4d0000;
 }
 
-.container-nav{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .display-3{
     color: white;
@@ -345,11 +302,6 @@ p  { font-size: .75em;    /* 0.75*16 = 12 */      }
 }
 
 
-
-
-
-
-
 /* bootstrap overrides */
 
 h1,h2,h3 {
@@ -363,10 +315,12 @@ h1,h2,h3 {
 .label-default {
   background-color:#990000;
 }
-.page-header {
-  margin-top: 55px;
+
+a.page-header {
+  margin-top: 25px;
   padding-top: 9px;
   padding-left: 9px;
+  width: 100%;
   border:2px solid #9CAAC6;
   font-weight:700;
   text-transform:uppercase;
@@ -374,7 +328,7 @@ h1,h2,h3 {
 }
 
 .page-header1 {
-  margin-top: 45px;
+  margin-top: 25px;
   margin-bottom: 20px;
   padding-top: 9px;
   padding-left: 9px;
@@ -393,17 +347,13 @@ h1,h2,h3 {
     width: 100%;
 }
 
-small.text-muted {
-  font-family: Helvetica,courier-new,"Futura";
+
+a.page-header.text-muted.divider:hover{
+    background-color: #eef3f7;
+    text-decoration: none;
+    text-color: #ffffff;
 }
 
-.col-sm-12{
-    color: #9CAAC6; 
-}
-
-.page-header {
-    margin-top: 30px;
-}
 
 /*--------------------dashboard--------------------*/
  
@@ -458,7 +408,7 @@ a {
 }
 
 .divider {
-	margin-top:32px;
+	margin-top:20px;
 }
 
 #main {
@@ -521,9 +471,12 @@ a {
   }
 }
 
-#actions.col-sm-12{
-    padding-top: .5%;
+#sidebar .nav { 
+    margin: 0;
+    text-align: center;
 }
+
+
      
 .column .padding {
     padding: 8px;
@@ -612,7 +565,7 @@ img {
 
 
 #sidebar .nav{
-    margin: 10%;
+    margin: 0%;
 }
 
 #sidebar.column{
@@ -638,4 +591,6 @@ img {
     font-size: .50em;
     
 }
+
+/*---------------------------mobile------------------------
 
