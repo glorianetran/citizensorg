@@ -32,6 +32,7 @@ html(ng-app='myApp')
               a(href='/about') About
             li
               a.ng-cloak(ng-hide='isLoggedIn' href='/login') Login
+            li  
               a.ng-cloak(ng-show='isLoggedIn' href='/login') {{ currentUser }}
         
           
