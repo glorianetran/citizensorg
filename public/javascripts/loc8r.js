@@ -1,8 +1,8 @@
 angular.module("myApp", []);
 
 
-function authCtrl($scope, authentication){
-    authCtrl.$inject = ['$scope','authentication'];
+function authCtrl($scope, authentication, $location){
+    authCtrl.$inject = ['$scope','authentication', '$location'];
     
     $scope.currentUser = authentication.currentUser().name;
     $scope.isLoggedIn = authentication.isLoggedIn();
@@ -61,7 +61,6 @@ function authCtrl($scope, authentication){
      
     $scope.doRegister = function() {
         $scope.formError = "";
-        console.log("hi");
 
         authentication
         .register($scope.regcredentials)
@@ -69,17 +68,15 @@ function authCtrl($scope, authentication){
         $scope.formError = err;
         })
         .then(function(data){
-           
-            $scope.currentUser = authentication.currentUser().name;
-
+           $location.path("/");
         });
         
     }
 }
 
 
-function loginCtrl($scope, authentication) {
-    loginCtrl.$inject = ['$scope','authentication'];
+function loginCtrl($scope, authentication, $location) {
+    loginCtrl.$inject = ['$scope','authentication', '$location'];
     
     $scope.currentUser = authentication.currentUser().name;
 
@@ -111,7 +108,8 @@ function loginCtrl($scope, authentication) {
         $scope.formError = err;
         })
         .then(function(){
-
+            console.log("HEY");
+            $window.location.href = '/';
         });
  }
 }
@@ -142,7 +140,7 @@ function authentication ($http,$window) {
         };
         
         var isLoggedIn = function() {
-             console.log("hey");
+             
              var token = getToken();
              if(token){
              var payload = JSON.parse($window.atob(token.split('.')[1]));

@@ -67,16 +67,28 @@ module.exports.findpost = function(req, res)
 module.exports.dashboard = function (req, res){
 
 		
-	Action.find({}, function(err, data)
+	Action.find({}).lean().exec(function(err, data)
 	{
 		var results = []
 		results = data.reverse().slice(0, 5);
-		res.render('dashboard',{title: 'dashboard', actionArray: results});
+		var new_results = results.map(function(obj){
+			obj["date"] = obj.date.toLocaleDateString("en-US");
+			return obj;
+		});
+		res.render('dashboard',{title: 'dashboard', actionArray: new_results});
 	});
 
     
 };
 
+module.exports.getDetail = function(req, res)
+{
+	Action.find({_id: req.params.id}, function(err, data)
+	{
+		console.log(data);
+		res.render('details', {result:data});
+	});
+}
 
 module.exports.actionform = function(req, res)
 {
@@ -85,7 +97,7 @@ module.exports.actionform = function(req, res)
 
 module.exports.actionpost = function(req,res)
 {
-	Action.create({name: req.body.name, action: req.body.action}, function(err, data)
+	Action.create({name: req.body.name, action: req.body.action, location: req.body.location, description: req.body.description, date: req.body.date}, function(err, data)
 	{
 		if (err) {
 			res.redirect('/actionpost');

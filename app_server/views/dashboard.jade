@@ -8,7 +8,7 @@ block content
         #sidebar.column.col-sm-3.col-xs-12
           ul.nav
             li.active
-              a(href='/actionget') Post Action
+              a(href='/actionget' ng-show='isLoggedIn' ) Post Action
             li
               a(href='#actions') Action Items
             li
@@ -23,7 +23,7 @@ block content
               // content
               
               #post.col-sm-12
-                a.page-header.text-muted.divider.col-sm-12(href='/actionget') Post Action
+                a.page-header.text-muted.divider.col-sm-12(href='/actionget' ng-show='isLoggedIn') Post Action
                  i.fa.fa-plus(aria-hidden='true')
               
               #actions.col-sm-12
@@ -38,8 +38,9 @@ block content
                       span.label.label-default= item.name
                     h4
                       small.text-muted
-                        | 1 hour ago 
-                        a.text-muted(href='#') Read More
+                        a.text-muted(href='/detail/' + item._id) Read More
+                        span  | Date: #{item.date}
+                        
                   .col-sm-2
                     a.pull-right(href='#')
                       img.img-circle(src='http://api.randomuser.me/portraits/thumb/men/19.jpg')
