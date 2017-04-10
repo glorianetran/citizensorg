@@ -108,3 +108,14 @@ module.exports.actionpost = function(req,res)
 		}
 	})
 }
+
+module.exports.getToday = function(req, res)
+{
+	var createdTime = new Date().getTime()
+	var newTime = createdTime + 86400000
+	
+	Action.find({"date": {"$gte": new Date(createdTime), "$lt": new Date(newTime)}}, function(err, data)
+	{
+		res.render('today', {result: data})
+	});
+}
