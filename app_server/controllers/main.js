@@ -60,7 +60,8 @@ module.exports.results = function (req, res) {
 module.exports.findpost = function(req, res)
 {	
 	var zipcode = req.body.zipcode;
-	var url = "/findCongressResults/" + zipcode
+	// var url = "/findCongressResults/" + zipcode
+	var url = "/findcongressresults/" + zipcode
 	res.redirect(url);
 }
 
