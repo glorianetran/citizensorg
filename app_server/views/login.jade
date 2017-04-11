@@ -3,7 +3,7 @@ script(src="/javascripts/angular.min.js")
 script(src="/javascripts/loc8r.js")
   
   block content
-      .container
+      .container(ng-cloak)
         .row
           .col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
             .panel.panel-login
@@ -14,7 +14,7 @@ script(src="/javascripts/loc8r.js")
                   .col-xs-6
                     a#register-form-link(href='#') Sign Up
               
-              .panel-body(ng-cloak)
+              .panel-body
                 .row
                   .col-lg-12
                     h2 Hey, {{currentUser}}
