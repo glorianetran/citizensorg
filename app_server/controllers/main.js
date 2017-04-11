@@ -53,7 +53,7 @@ module.exports.results = function (req, res) {
 	}
     
     
-    
+    console.log(textArray);
 	res.render('findCongressResults', {resultspage: textArray});
     }
 
@@ -75,6 +75,7 @@ module.exports.dashboard = function (req, res){
 			obj["date"] = obj.date.toLocaleDateString("en-US");
 			return obj;
 		});
+		console.log(new_results)
 		res.render('dashboard',{title: 'dashboard', actionArray: new_results});
 	});
 
@@ -114,8 +115,12 @@ module.exports.getToday = function(req, res)
 	var createdTime = new Date().getTime()
 	var newTime = createdTime + 86400000
 	
-	Action.find({"date": {"$gte": new Date(createdTime), "$lt": new Date(newTime)}}, function(err, data)
+	Action.find({"date": {"$gte": new Date(createdTime), "$lt": new Date(newTime)}}).lean().exec(function(err, results)
 	{
-		res.render('today', {result: data})
+		var new_results = results.map(function(obj){
+			obj["date"] = obj.date.toLocaleDateString("en-US");
+			return obj;
+		});
+		res.render('today', {result: new_results})
 	});
 }
