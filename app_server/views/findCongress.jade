@@ -3,14 +3,21 @@ extends layout
 h1 find congress person page
 
 block content
-    .container
+    .container-margin
+      .row
+        .col-lg-12
+            h2.page-header3
+              | Find Your Congress Person
+            p#description
+              | Enter your zip into the form below to get your Congress person's current information.
+              br
       .row
         .col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
           .panel.panel-post
             form#action-form(action='/findyourcongressperson' method="post")
               .form-group
                 label(for='action') Enter Zip
-                input#action.form-control(type='text', name='zipcode', value='94606', placeholder='Enter Action')
+                input#action.form-control(type='text', name='zipcode', placeholder='Enter Zip')
               
               button.btn.btn-primary(type='submit', value='submit') Submit
-  
+    
