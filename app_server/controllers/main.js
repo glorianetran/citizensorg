@@ -85,7 +85,7 @@ module.exports.dashboard = function (req, res){
 
 module.exports.getDetail = function(req, res)
 {
-	Action.find({_id: req.params.id}, function(err, data)
+	Action.find({_id: req.params.id}).lean().exec(function(err, data)
 	{
 		var new_results = data.map(function(obj){
 			obj["date"] = obj.date.toLocaleDateString("en-US");
