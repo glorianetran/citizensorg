@@ -6,7 +6,7 @@ button
     background: #990000; red
     border-color: #4d0000 red
 panel
-    login: #9CAAC6 bluish gray
+    login: #5d74a2 bluish gray
     font: #0000b3
     background-color: #eef3f7
 */
@@ -214,7 +214,7 @@ p.lead{
 .panel-login {
     background-color: #eef3f7;
     margin-top: 15%;
-	border-color: #9CAAC6;
+	border-color: #5d74a2;
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
 	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
@@ -222,7 +222,7 @@ p.lead{
 .panel-login>.panel-heading {
 	color: #5A79A5;
 	background-color: #eef3f7;
-	border-color: #9CAAC6;
+	border-color: #5d74a2;
 	text-align:center;
 }
 .panel-login>.panel-heading a{
@@ -251,7 +251,7 @@ p.lead{
 }
 .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
 	height: 45px;
-	border: 1px solid #9CAAC6;
+	border: 1px solid #5d74a2;
 	font-size: 16px;
 	-webkit-transition: all 0.1s linear;
 	-moz-transition: all 0.1s linear;
@@ -263,7 +263,7 @@ p.lead{
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	border-color: #9CAAC6;
+	border-color: #5d74a2;
 }
 .btn-login {
 	outline: none;
@@ -272,7 +272,7 @@ p.lead{
 	font-size: 14px;
 	height: auto;
 	font-weight: normal;
-	padding: 14px 0;
+	padding: 8px 14px;
 	text-transform: uppercase;
 	border-color: #4d0000;
 }
@@ -283,13 +283,15 @@ p.lead{
 	border-color: #4d0000;
 }
 .forgot-password {
-	text-decoration: underline;
-	color: #888;
+	text-decoration: none;
+	color: #8e9ebe;
+	font-size: .5em;
 }
 .forgot-password:hover,
 .forgot-password:focus {
-	text-decoration: underline;
-	color: #9CAAC6;
+	text-decoration: none;
+	color: #0000b3;
+	
 }
 
 .btn-register {
@@ -299,7 +301,7 @@ p.lead{
 	font-size: 16px;
 	height: auto;
 	font-weight: normal;
-	padding: 14px 0;
+	padding: 8px 14px;
 	text-transform: uppercase;
 	border-color: #4d0000;
 }
@@ -309,6 +311,17 @@ p.lead{
 	background-color: #990000;
 	border-color: #4d0000;
 }
+
+#login-form{
+    margin-top: 1em;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 4px .5em 0;
+    margin-top: 1em;
+    line-height: normal;
+}
+
 
 
 /* bootstrap overrides */
@@ -334,7 +347,7 @@ a.page-header {
   padding-top: 9px;
   padding-left: 9px;
   width: 100%;
-  border:2px solid #9CAAC6;
+  border:2px solid #5d74a2;
   font-weight:700;
   text-transform:uppercase;
   letter-spacing:2px;
@@ -346,14 +359,14 @@ a.page-header {
   padding-top: 9px;
   padding-left: 9px;
   line-height: 2em;
-  border-bottom:2px solid #9CAAC6;
+  border-bottom:2px solid #5d74a2;
   font-weight:700;
   text-transform:uppercase;
   letter-spacing:2px;
 }
 
 .row-card{
-   border-color: #9CAAC6; 
+   border-color: #5d74a2; 
 }
 
 .col-sm-9.full {
@@ -572,7 +585,7 @@ img {
     margin-top: 1em;
     padding-bottom: .25em;
     margin-bottom: 1em;
-    border-bottom:2px solid #9CAAC6;
+    border-bottom:2px solid #5d74a2;
 }
 
 
@@ -614,5 +627,62 @@ img {
     
 }
 
-/*---------------------------mobile------------------------
+/*---------------------------input form------------------------*/
+
+/*colors:
+background: #f1f1f1
+anchor: #818181
+hover: #f1f1f1
+button
+    background: #990000; red
+    border-color: #4d0000 red
+panel
+    login: #5d74a2 bluish gray
+    font: #0000b3
+    background-color: #eef3f7
+*/
+
+form{
+    padding: 5%;
+    padding-bottom: 8%;
+    background-color: #eef3f7;
+    margin-top: 15%;
+}
+
+.btn.btn-primary {
+	outline: none;
+	background-color: #ce0000;
+    color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 8px 14px;
+	text-transform: uppercase;
+	border-color: #4d0000;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+	background-color: #990000;
+    color: #f2f2f2;
+	border-color: #4d0000;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #5d74a2;
+    font-size: 80%;
+    
+}
+
+form#action-form.ng-pristine.ng-valid{
+    background-color: #eef3f7;
+    margin-top: 15%;
+	border-color: #5d74a2 5px 0;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
 
