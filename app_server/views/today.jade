@@ -1,0 +1,17 @@
+extend layout
+
+block content 
+    br
+    h1 Activities in the next 24 Hours
+    each item in result
+        br
+        span #{item.action}
+        br
+        span #{item.name}
+        br
+        a(href='/detail/' + item._id) Read More
+        br
+        span  | Date: #{item.date}
+        br
+        br
+

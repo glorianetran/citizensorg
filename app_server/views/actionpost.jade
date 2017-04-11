@@ -2,7 +2,7 @@ extends layout
 
 block content
       br
-      form(action='/actionpost', method='post')
+      form(action='/actionpost', method='post', id='usrform')
         | Name: 
         input(type='text', name='name')
         br
@@ -13,7 +13,7 @@ block content
         input(type='text', name='location')
         br
         | Text Body: 
-        input(type='textarea', name='description')
+        textarea(rows="4", cols="50", form="usrform")
         br
         | Date:
         input(type='date', name='date')
