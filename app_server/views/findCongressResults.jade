@@ -1,29 +1,29 @@
 //h1 find congress person results refer to main.js
+extends layout
 
-each item in resultspage
-
-    span Name: #{JSON.stringify(item.Name).replace("\"", "").replace("\"", "")}
+block content 
     br
-    span Email: #{JSON.stringify(item.Email).replace("\"", "").replace("\"", "")}
-    br
-    span Office: #{JSON.stringify(item.Office).replace("\"", "").replace("\"", "")}
-    br
-    span Party: #{JSON.stringify(item.Party).replace("\"", "").replace("\"", "")}
-    br
-    span State: #{JSON.stringify(item.State).replace("\"", "").replace("\"", "")}
-    br
-    if item.Twitter
-        span Twitter: @#{JSON.stringify(item.Twitter).replace("\"", "").replace("\"", "")}
+    each item in resultspage
+    
+        span Name: #{JSON.stringify(item.Name).replace("\"", "").replace("\"", "")}
         br
-    if item.Website
-        span Website: #{JSON.stringify(item.Website).replace("\"", "").replace("\"", "")}
+        span Email: #{JSON.stringify(item.Email).replace("\"", "").replace("\"", "")}
         br
-    if item.YouTube
-        span Youtube: #{JSON.stringify(item.YouTube).replace("\"", "").replace("\"", "")}
+        span Office: #{JSON.stringify(item.Office).replace("\"", "").replace("\"", "")}
+        br
+        span Party: #{JSON.stringify(item.Party).replace("\"", "").replace("\"", "")}
+        br
+        span State: #{JSON.stringify(item.State).replace("\"", "").replace("\"", "")}
+        br
+        if item.Twitter
+            span Twitter: @#{JSON.stringify(item.Twitter).replace("\"", "").replace("\"", "")}
+            br
+        if item.Website
+            span Website: #{JSON.stringify(item.Website).replace("\"", "").replace("\"", "")}
+            br
+        if item.YouTube
+            span Youtube: #{JSON.stringify(item.YouTube).replace("\"", "").replace("\"", "")}
+            br  
+    
         br
 
-    br
-
-
-// each result in #{resultspage}
-//     p result
