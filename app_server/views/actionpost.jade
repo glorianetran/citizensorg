@@ -14,13 +14,18 @@ block content
               input#action.form-control(type='text', name='action', aria-describedby='actionHelp', placeholder='Enter Action')
             .form-group
               label(for='date') Date
-              input#date.form-control(type='text', name='date', aria-describedby='dateHelp', placeholder='Enter Date')
+              input#date.form-control(type='date', name='date', aria-describedby='dateHelp', placeholder='Enter Date')
             .form-group
-              label(for='textArea') Additional Information
+              label(for='location') Location Address
+              input#date.form-control(type='text', name='location', aria-describedby='locationHelp', placeholder='Enter Location Address', rows='2')  
+            .form-group
+              label(for='textArea', rows='4', cols='50', name='description', form='action-form') Additional Information
               textarea#textArea.form-control(rows='5')
            
             button.btn.btn-primary(type='submit', value='submit') Submit
-            //input(type='submit', value='Submit')  
+            //input(type='submit', value='Submit') 
+            
+   
           
           
           
