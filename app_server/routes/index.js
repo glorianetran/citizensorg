@@ -38,5 +38,6 @@ router.get('/register', ctrlLocations.register);
 router.get('/actionget', ctrlMain.actionform);
 router.post('/actionpost', ctrlMain.actionpost);
 
-
+router.get('/detail/:id', ctrlMain.getDetail);
+router.get('/dayactivity', ctrlMain.getToday);
 module.exports = router;

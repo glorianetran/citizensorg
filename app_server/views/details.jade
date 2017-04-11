@@ -1,0 +1,14 @@
+extend layout
+
+block content 
+    each item in result
+        br
+        h1 Details for #{item.action}
+        br
+        span Organizer: #{item.name}
+        br
+        span Date: #{item.date}
+        br
+        span Location: #{item.location}
+        br
+        span Description: #{item.description}
