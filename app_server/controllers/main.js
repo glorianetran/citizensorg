@@ -87,8 +87,12 @@ module.exports.getDetail = function(req, res)
 {
 	Action.find({_id: req.params.id}, function(err, data)
 	{
-		console.log(data);
-		res.render('details', {result:data});
+		var new_results = data.map(function(obj){
+			obj["date"] = obj.date.toLocaleDateString("en-US");
+			return obj;
+		});
+
+		res.render('details', {result:new_results});
 	});
 }
 
