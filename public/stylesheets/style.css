@@ -742,6 +742,21 @@ label {
     margin-top: .5em;
 }
 
+.card-group1{
+     border: 1px solid #5d74a2;
+     background-color: #eef3f7;
+     color: #5d74a2;
+     margin-bottom: 2em;
+     padding: 1em;
+     padding-top: .5em;
+     text-align: left;
+     -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+
+
+
 .page-header4{
     margin-top: 1em;
     padding-bottom: .25em;

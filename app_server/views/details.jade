@@ -10,11 +10,14 @@ block content
                 | Details for #{item.action}
           .row
             .col-lg-6.col-xs-12
-              h4.span Organizer 
-              | #{item.name}
-              h4.span Date
-              | #{item.date}
-              h4.span Location 
-              | #{item.location}
-              h4.span Description 
-              | #{item.description}
+              .card-group1
+                .card
+                 .card-block
+                  h5.span1 Organizer 
+                  h4 #{item.name}
+                  h5.span1 Date
+                  h4 #{item.date}
+                  h5.span1 Location 
+                  h4 #{item.location}
+                  h5.span1 Description 
+                  h4 #{item.description}
