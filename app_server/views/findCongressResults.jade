@@ -20,12 +20,17 @@ block content
                     h5.card-text2 #{JSON.stringify(item.Party).replace("\"", "").replace("\"", "")}-#{JSON.stringify(item.State).replace("\"", "").replace("\"", "")}
                   .card-footer.card-text
                     small.text-muted
-                     a.h5.card-link(href='http://twitter.com/#{JSON.stringify(item.Twitter).replace("\"", "").replace("\"", "")}', target='_blank') 
+                     a.h5.card-link.i.fa.fa-twitter.icon-2x(href='http://twitter.com/#{JSON.stringify(item.Twitter).replace("\"", "").replace("\"", "")}', target='_blank') 
                         if item.Twitter
-                            i.fa.fa-twitter.icon-2x
-                     a.h4.card-link(href='#{JSON.stringify(item.Website).replace("\"", "").replace("\"", "")}')
+                            
+                     a.h4.card-link.btn.btn-event1(href='#{JSON.stringify(item.Website).replace("\"", "").replace("\"", "")}')
                         if item.Website
                             | Website
+      .row
+        .col-lg-12
+                            
+    
+                             
         
                      
 

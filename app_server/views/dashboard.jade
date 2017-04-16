@@ -33,11 +33,11 @@ block content
                   .col-sm-12
                     .pull-right
                       span-date #{item.date}  
-                    h4= item.action
+                    h4.item-action= item.action
                      
                     h4
-                      small.text-muted
-                        .text-muted= item.name
+                      small.text-muted1
+                        .text-muted=  item.name
                     
                     h4
                       a.btn.btn-event(href='/detail/' + item._id) Event Details

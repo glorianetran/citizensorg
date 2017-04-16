@@ -347,23 +347,23 @@ h1,h2,h3 {
 }
 
 a.page-header {
-  margin-top: 25px;
-  padding-top: 9px;
-  padding-left: 9px;
+  margin-top: 1.5em;
+  padding-top: .5em;
+  padding-left: .5em;
   width: 100%;
-  border:2px solid #5d74a2;
+  border: 2px solid #5d74a2;
   font-weight:700;
   text-transform:uppercase;
-  letter-spacing:2px;
+  letter-spacing: 2px;
 }
 
 .page-header1 {
-  margin-top: 25px;
-  margin-bottom: 20px;
-  padding-top: 9px;
-  padding-left: 9px;
+  margin-top: 1.5em;
+  margin-bottom: 1.2em;
+  padding-top: .5em;
+  
   line-height: 2em;
-  border-bottom:2px solid #5d74a2;
+  border-bottom: 2px solid #5d74a2;
   font-weight:700;
   text-transform:uppercase;
   letter-spacing:2px;
@@ -459,18 +459,18 @@ a {
 }
 #sidebar a.logo {
   display:block;
-  padding:3px;
+  padding: .2em;
   background-color:#fff;
   color:#777777;
-  height:40px;
-  width:40px;
-  margin-top: 50px;
-  margin:15px;
-  font-size:26px;
+  height:3em;
+  width:3em;
+  margin-top: 4.2em;
+  margin:1em;
+  font-size: 2.5em;
   font-weight:700;
   text-align:center;
   text-decoration:none;
-  text-shadow:0 0 0;
+  text-shadow: .5em .5em #000000;
 }
 #sidebar-footer {
   position:absolute;bottom:5px;
@@ -489,7 +489,7 @@ a {
     font-size:3em;
     height:75px;
     width:75px;
-    margin-bottom:30px;
+    margin-bottom: 2.7em;
   }
   .column {
       overflow: visible;
@@ -590,6 +590,7 @@ img {
     padding-bottom: .25em;
     margin-bottom: 1em;
     border-bottom:2px solid #5d74a2;
+    font-size: 150%;
 }
 
 
@@ -609,6 +610,16 @@ img {
 
 #sidebar.column{
     padding-top: 5%;
+}
+
+.item-action{
+    color: #2f3a51;
+    font-size: 100%;
+}
+
+span-date{
+    color: #5d74a2;
+    font-size: 65%;
 }
 
 /*----------------------footer----------------------*/
@@ -711,6 +722,8 @@ label {
 	border-color: #5d74a2;
 }
 
+
+
 .form-control{
     border: 1px solid #5d74a2;
 }
@@ -722,7 +735,7 @@ label {
 
 .text-muted{
     color: #5d74a2;
-    font-size: 80%;
+    font-size: 100%;
 }
 
 
@@ -744,9 +757,21 @@ a.btn.btn-event{
 	font-size: 50%;
 	height: auto;
 	font-weight: normal;
-	padding: 8px 14px;
+	padding: .25em .5em;
 	text-transform: uppercase;
-	border-color: #4d0000;
+}
+
+a.btn.btn-event1{
+    outline: none;
+	background-color: #ce0000;
+    color: #fff;
+	font-size: 50%;
+	height: auto;
+	font-weight: normal;
+	padding: .25em .5em;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 1em;
 }
 
 /*-----------------------findCP-----------------*/
@@ -757,8 +782,9 @@ a.btn.btn-event{
 }
 
 .card-group{
-     border: 1px solid #5d74a2;
-     background-color: #eef3f7;
+     border: .75em solid #eef3f7;  
+     padding-top: .5em;
+     padding-bottom: .6em;
      color: #5d74a2;
      margin-bottom: 2em;
      text-align: center;
@@ -812,8 +838,10 @@ a.btn.btn-event{
 }
 
 .fa.fa-twitter.icon-2x{
-    font-size: 2em;
-    margin: .5em;
+    font-size: 1.75em;
+    margin-right: 1em;
+    margin-bottom: 0;
+    text-decoration: none;
 }
 
 
