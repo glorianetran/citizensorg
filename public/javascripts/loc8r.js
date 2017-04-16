@@ -6,6 +6,10 @@ function authCtrl($scope, authentication, $location){
     
     $scope.currentUser = authentication.currentUser().name;
     $scope.isLoggedIn = authentication.isLoggedIn();
+    $scope.logout = function() {
+        authentication.logout();
+        window.location.href = '/';
+        };
     $scope.hi = "hi";
     $scope.pageHeader = {
      title: 'Sign in to Loc8r'
@@ -34,7 +38,7 @@ function authCtrl($scope, authentication, $location){
         $scope.formError = err;
         })
         .then(function(){
-
+            window.location.href = '/';
         });
     }
     
@@ -56,6 +60,7 @@ function authCtrl($scope, authentication, $location){
         } 
         else {
             $scope.doRegister();
+            
         }
      };
      
@@ -68,7 +73,8 @@ function authCtrl($scope, authentication, $location){
         $scope.formError = err;
         })
         .then(function(data){
-           $location.path("/");
+            
+            window.location.href = '/';
         });
         
     }
@@ -108,8 +114,7 @@ function loginCtrl($scope, authentication, $location) {
         $scope.formError = err;
         })
         .then(function(){
-            console.log("HEY");
-            $window.location.href = '/';
+           
         });
  }
 }
@@ -138,7 +143,6 @@ function authentication ($http,$window) {
             saveToken(data.data.token);
             });
         };
-        
         var isLoggedIn = function() {
              
              var token = getToken();
@@ -169,6 +173,7 @@ function authentication ($http,$window) {
         };
         var logout = function() {
             $window.localStorage.removeItem('loc8r-token');
+            
         };
         return {
             register : register,
