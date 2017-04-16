@@ -10,14 +10,12 @@ block content
             li.active
               a(href='/actionget' ng-show='isLoggedIn' ) Post Action
             li
-              a(href='#actions') Action Items
-            li
               a(href='/dayactivity') Today's Actions
           ul#sidebar-footer.nav.hidden-xs
             
         // /sidebar
         // main
-        #main.column.col-sm-8.col-xs-12
+        #main.column.col-sm-7.col-xs-12
           .padding
             .full.col-sm-9
               // content
@@ -32,18 +30,23 @@ block content
               // /top story
               each item in actionArray
                 .row
-                  .col-sm-10
-                    h3= item.action
-                    h4
-                      span.label.label-default= item.name
+                  .col-sm-12
+                    .pull-right
+                      span-date #{item.date}  
+                    h4= item.action
+                     
                     h4
                       small.text-muted
-                        a.text-muted(href='/detail/' + item._id) Read More
-                        span  | Date: #{item.date}
+                        .text-muted= item.name
+                    
+                    h4
+                      a.btn.btn-event(href='/detail/' + item._id) Event Details
+                    
                         
-                  .col-sm-2
-                    a.pull-right(href='#')
-                      img.img-circle(src='http://api.randomuser.me/portraits/thumb/men/19.jpg')
+                      
+                        
+            
+                    
                 .row.divider
                   .col-sm-12
                     hr
