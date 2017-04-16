@@ -1,10 +1,10 @@
 doctype html
-html(ng-app='myApp')
+html(ng-app='myApp' ng-cloak)
 
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1')
     meta(charset='utf-8')
-    title
+    title Home
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/bootstrap/font-awesome/css/font-awesome.min.css')
@@ -12,8 +12,8 @@ html(ng-app='myApp')
     link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
     
  
-  body(ng-controller='authCtrl' ng-cloak)
-   nav.navbar.navbar-inverse.navbar-fixed-top
+  body(ng-controller='authCtrl')
+    nav.navbar.navbar-inverse.navbar-fixed-top
       .container-nav
         .navbar-header
           button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
@@ -26,25 +26,22 @@ html(ng-app='myApp')
           ul.nav.navbar-nav
             li
               a(ng-show='isLoggedIn' href='/dashboard') Organize
-            
+            li
               a(href='/findyourcongressperson') CongressPerson
-            
+            li  
               a(href='/about') About
             
+            li  
               a(ng-hide='isLoggedIn' href='/login') Login
               
+            li  
               a(ng-show='isLoggedIn') {{ currentUser }}
               
-        
-          
-        
-         
-    
-    .container
+    #container
       block content
   
-
-      footer
+      block footer
+        footer
           .row
             .col-lg-12.col-xs-12
 
@@ -53,10 +50,10 @@ html(ng-app='myApp')
   
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='javascripts/javascript.js')
     script(src='/javascripts/validation.js')
     script(src='/javascripts/loc8r.js')
     
         
-    script(src='/javascripts/jquery-1.11.1.min.js')
-    script(src='/bootstrap/js/bootstrap.min.js')
-    script(src='javascripts/javascript.js')
+    
+    
