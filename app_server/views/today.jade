@@ -12,25 +12,31 @@ block content
                       a(href='/dashboard') See All Actions
                   ul#sidebar-footer.nav.hidden-xs
                     
-            #main.column.col-sm-8.col-xs-12
+            #main.column.col-sm-7.col-xs-12
               .padding
                 .full.col-sm-9
             
                     
                   #actions.col-sm-12
                     .page-header1.text-muted.divider
-                      | Activities in the next 24 Hours
+                      | Upcoming Actions
                   each item in result
                     .row
-                      .col-sm-10
-                        h3= item.action
-                          h4
-                          span #{item.action}
-                          h4
-                          span #{item.name}
-                          h4
-                          a(href='/detail/' + item._id) Read More
-                          br
-                          span  | Date: #{item.date}
+                      .col-sm-12
+                        .pull-right
+                          span-date #{item.date}  
+                        h4 #{item.action}
+                     
+                        h4
+                          small.text-muted
+                            .text-muted #{item.name}
+                    
+                        h4
+                          a.btn.btn-event(href='/detail/' + item._id) Event Details
                       
+                      
+                    .row.divider
+                     .col-sm-12
+                       hr
+                   
                     

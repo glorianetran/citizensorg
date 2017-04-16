@@ -17,7 +17,7 @@ block content
             
         // /sidebar
         // main
-        #main.column.col-sm-8.col-xs-12
+        #main.column.col-sm-7.col-xs-12
           .padding
             .full.col-sm-9
               // content
@@ -32,17 +32,20 @@ block content
               // /top story
               each item in actionArray
                 .row
-                  .col-sm-10
-                    h3= item.action
+                  .col-sm-12
+                    .pull-right
+                      span-date #{item.date}  
+                    h4.item-action= item.action
+                     
                     h4
-                      span.label.label-default= item.name
+                      small.text-muted1
+                        .text-muted=  item.name
+                    
                     h4
-                      small.text-muted
-                        a.text-muted(href='/detail/' + item._id) Read More
-                        span  | Date: #{item.date}
+                      a.btn.btn-event(href='/detail/' + item._id) Event Details
+                    
                         
-                  .col-sm-2
-                    a.pull-right(href='#')
+
                 .row.divider
                   .col-sm-12
                     hr
