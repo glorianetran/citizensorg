@@ -1,5 +1,5 @@
 doctype html
-html(ng-app='myApp' ng-cloak)
+html(ng-app='myApp' ng-cloak=' ')
 
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1')
@@ -10,6 +10,7 @@ html(ng-app='myApp' ng-cloak)
     link(rel='stylesheet', href='/bootstrap/font-awesome/css/font-awesome.min.css')
     link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+    script(src="/javascripts/angular.min.js")
     
  
   body(ng-controller='authCtrl')
@@ -35,10 +36,12 @@ html(ng-app='myApp' ng-cloak)
               a(ng-hide='isLoggedIn' href='/login') Login
               
             li  
-              a(ng-show='isLoggedIn') {{ currentUser }}
+              a(ng-hide='isLoggedIn') {{ currentUser }}
+          
               
             li
               a(ng-show='isLoggedIn' ng-click="logout()") Logout
+              
         
           
         
@@ -54,7 +57,7 @@ html(ng-app='myApp' ng-cloak)
             .col-lg-12.col-xs-12
 
             
-    script(src="/javascripts/angular.min.js")
+    
   
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')

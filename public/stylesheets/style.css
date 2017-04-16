@@ -42,31 +42,28 @@ body{
 
 @media screen and (max-width: 767px) {
     body {
-        font-size: 110%;
-    }
-    .pull-right{
-         line-height: 70%
+        font-size: 1.2em;
     }
 }
 
 /* sm */
 @media screen and (min-width: 768px) {
     body {
-        font-size: 140%;
+        font-size: 1em;
     }
 }
 
 /* md */
 @media screen and (min-width: 992px) {
     body {
-        font-size: 140%;
+        font-size: 1.8em;
     }
 }
 
 /* lg */
 @media screen and (min-width: 1200px) {
     body {
-        font-size: 160%;
+        font-size: 2em;
     }
 }
 
@@ -103,13 +100,13 @@ p.lead{
 
 /*--------------navbar---------------*/
 
-.ng-cloak, .x-ng-cloak {
+.ng-cloak, .x-ng-cloak ng-cloak{
   display: none !important;
 }
 
 .nav>li {
     position: relative;
-    display: -webkit-block-box;
+    display: -webkit-inline-box;
 }
 
 .fa.fa-bars{
@@ -136,7 +133,6 @@ p.lead{
 #navbar.collapse.navbar-collapse{
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 .container-nav{
@@ -152,11 +148,14 @@ p.lead{
 }
 
 
+
+
+
 /*----------------homepage---------------*/
 
 .button{
     box-shadow: 2px 2px 8px #595959;
-    font-size: 50%;
+    font-size: 16px;
 	height: auto;
 	font-weight: normal;
 	padding: 10px 20px;
@@ -214,6 +213,8 @@ p.lead{
 }
 
 /*------------------ Login and Sign Up-----------------*/
+
+
 
 .panel-login {
     background-color: #eef3f7;
@@ -273,7 +274,7 @@ p.lead{
 	outline: none;
 	background-color: #ce0000;
     color: #fff;
-	font-size: 50%;
+	font-size: 14px;
 	height: auto;
 	font-weight: normal;
 	padding: 8px 14px;
@@ -302,10 +303,10 @@ p.lead{
 	background-color: #ce0000;
 	outline: none;
 	color: #fff;
-	font-size: 50%;
+	font-size: 16px;
 	height: auto;
 	font-weight: normal;
-	padding: 6px 12px;
+	padding: 8px 14px;
 	text-transform: uppercase;
 	border-color: #4d0000;
 }
@@ -347,23 +348,23 @@ h1,h2,h3 {
 }
 
 a.page-header {
-  margin-top: 1.5em;
-  padding-top: .5em;
-  padding-left: .5em;
+  margin-top: 25px;
+  padding-top: 9px;
+  padding-left: 9px;
   width: 100%;
-  border: 2px solid #5d74a2;
+  border:2px solid #5d74a2;
   font-weight:700;
   text-transform:uppercase;
-  letter-spacing: 2px;
+  letter-spacing:2px;
 }
 
 .page-header1 {
-  margin-top: 1.5em;
-  margin-bottom: 1.2em;
-  padding-top: .5em;
-  
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding-top: 9px;
+  padding-left: 9px;
   line-height: 2em;
-  border-bottom: 2px solid #5d74a2;
+  border-bottom:2px solid #5d74a2;
   font-weight:700;
   text-transform:uppercase;
   letter-spacing:2px;
@@ -375,7 +376,6 @@ a.page-header {
 
 .col-sm-9.full {
     width: 100%;
-    padding-bottom: 8%;
 }
 
 
@@ -459,18 +459,18 @@ a {
 }
 #sidebar a.logo {
   display:block;
-  padding: .2em;
+  padding:3px;
   background-color:#fff;
   color:#777777;
-  height:3em;
-  width:3em;
-  margin-top: 4.2em;
-  margin:1em;
-  font-size: 2.5em;
+  height:40px;
+  width:40px;
+  margin-top: 50px;
+  margin:15px;
+  font-size:26px;
   font-weight:700;
   text-align:center;
   text-decoration:none;
-  text-shadow: .5em .5em #000000;
+  text-shadow:0 0 0;
 }
 #sidebar-footer {
   position:absolute;bottom:5px;
@@ -489,7 +489,7 @@ a {
     font-size:3em;
     height:75px;
     width:75px;
-    margin-bottom: 2.7em;
+    margin-bottom:30px;
   }
   .column {
       overflow: visible;
@@ -507,12 +507,14 @@ a {
     text-align: center;
 }
 
+
+     
 .column .padding {
     padding: 8px;
 }
 
 
-#main.column.col-sm-7 {
+#main.column.col-sm-8 {
     background-color: #eef3f7;
 }
  
@@ -525,8 +527,8 @@ a {
 hr {
     margin-top: 0px;
     margin-bottom: 0px;
-    border: .1em solid #eef3f7;
-    border-top: .1em solid #eef3f7;
+    border: 4px solid #eee;
+    border-top: 4px solid #eee;
     width: 100%;
 }
 
@@ -590,7 +592,6 @@ img {
     padding-bottom: .25em;
     margin-bottom: 1em;
     border-bottom:2px solid #5d74a2;
-    font-size: 150%;
 }
 
 
@@ -599,7 +600,7 @@ img {
 }
 
 #actions{
-    padding-top: 5%;
+    padding-top: 10%;
 }
 
 
@@ -610,16 +611,6 @@ img {
 
 #sidebar.column{
     padding-top: 5%;
-}
-
-.item-action{
-    color: #2f3a51;
-    font-size: 100%;
-}
-
-span-date{
-    color: #5d74a2;
-    font-size: 65%;
 }
 
 /*----------------------footer----------------------*/
@@ -662,7 +653,7 @@ panel
 	outline: none;
 	background-color: #ce0000;
     color: #fff;
-	font-size: 50%;
+	font-size: 14px;
 	height: auto;
 	font-weight: normal;
 	padding: 8px 14px;
@@ -722,56 +713,8 @@ label {
 	border-color: #5d74a2;
 }
 
-
-
 .form-control{
     border: 1px solid #5d74a2;
-}
-
-.span-date{
-    color: #5d74a2;
-    font-size: 60%;
-}
-
-.text-muted{
-    color: #5d74a2;
-    font-size: 100%;
-}
-
-
-a.text-muted1{
-     color: #0000b3;
-     background-color: #eef3f7; 
-}
-
-
-
-.pull-right{
-   margin: 0;
-}
-
-a.btn.btn-event{
-    outline: none;
-	background-color: #ce0000;
-    color: #fff;
-	font-size: 50%;
-	height: auto;
-	font-weight: normal;
-	padding: .25em .5em;
-	text-transform: uppercase;
-}
-
-a.btn.btn-event1{
-    outline: none;
-	background-color: #ce0000;
-    color: #fff;
-	font-size: 50%;
-	height: auto;
-	font-weight: normal;
-	padding: .25em .5em;
-	text-transform: uppercase;
-	margin-top: 0;
-	margin-bottom: 1em;
 }
 
 /*-----------------------findCP-----------------*/
@@ -782,9 +725,8 @@ a.btn.btn-event1{
 }
 
 .card-group{
-     border: .75em solid #eef3f7;  
-     padding-top: .5em;
-     padding-bottom: .6em;
+     border: 1px solid #5d74a2;
+     background-color: #eef3f7;
      color: #5d74a2;
      margin-bottom: 2em;
      text-align: center;
@@ -805,28 +747,6 @@ a.btn.btn-event1{
     margin-top: .5em;
 }
 
-.card-text3{
-    color: #0000b3;
-    margin-bottom: .5em;
-    margin-top: .5em;
-  
-    padding-bottom: .5em;
-}
-
-
-.card-group1{
-     background-color: #ffffff;
-     color: #5d74a2;
-     margin-bottom: 2em;
-     border: .75em solid #eef3f7;  
-     padding-top: .5em;
-     text-align: left;
-     -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-}
-
-
 .page-header4{
     margin-top: 1em;
     padding-bottom: .25em;
@@ -838,15 +758,8 @@ a.btn.btn-event1{
 }
 
 .fa.fa-twitter.icon-2x{
-    font-size: 1.75em;
-    margin-right: 1em;
-    margin-bottom: 0;
-    text-decoration: none;
+    font-size: 2em;
+    margin: .5em;
 }
 
 
-/*--------------------about--------------------*/
-
-.col-lg-3.col-sm-3.text-center{
-    padding-bottom: 7%;
-}
