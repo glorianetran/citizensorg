@@ -1,14 +1,20 @@
 extend layout
 
 block content 
-    each item in result
-        br
-        h1 Details for #{item.action}
-        br
-        span Organizer: #{item.name}
-        br
-        span Date: #{item.date}
-        br
-        span Location: #{item.location}
-        br
-        span Description: #{item.description}
+    .container-margin
+      each item in result
+          .row
+            .col-lg-12
+          
+            h2.page-header3
+                | Details for #{item.action}
+          .row
+            .col-lg-6.col-xs-12
+              h4.span Organizer 
+              | #{item.name}
+              h4.span Date
+              | #{item.date}
+              h4.span Location 
+              | #{item.location}
+              h4.span Description 
+              | #{item.description}
