@@ -47,6 +47,9 @@ body{
     .pull-right{
          line-height: 70%
     }
+    #main.column.col-sm-7 {
+        height: initial;
+    }
 }
 
 /* sm */
@@ -107,10 +110,7 @@ p.lead{
   display: none !important;
 }
 
-.nav>li {
-    position: relative;
-    display: -webkit-block-box;
-}
+
 
 .fa.fa-bars{
    position: relative;        
@@ -620,6 +620,11 @@ img {
 span-date{
     color: #5d74a2;
     font-size: 65%;
+}
+
+.span1{
+    margin-bottom: .2em;
+    margin-left: .2em;
 }
 
 /*----------------------footer----------------------*/
