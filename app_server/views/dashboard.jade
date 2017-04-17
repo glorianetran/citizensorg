@@ -1,15 +1,14 @@
 extend layout
 
 block content
-   .wrapper(ng-cloak)
+   .wrapper
       .box
        .row
         // sidebar
         #sidebar.column.col-sm-3.col-xs-12
-          ul.nav
+          ul.nav 
             li.active
               a(href='/actionget' ng-show='isLoggedIn' ) Post Action
-            
             li
               a(href='/dayactivity') Upcoming Actions
           ul#sidebar-footer.nav.hidden-xs
