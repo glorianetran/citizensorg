@@ -38,7 +38,7 @@ function authCtrl($scope, authentication, $location){
         $scope.formError = err;
         })
         .then(function(){
-            window.location.href = '/';
+            window.location.href = '/dashboard';
         });
     }
     
@@ -74,7 +74,7 @@ function authCtrl($scope, authentication, $location){
         })
         .then(function(data){
             
-            window.location.href = '/';
+            window.location.href = '/dashboard';
         });
         
     }
