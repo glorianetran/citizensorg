@@ -15,12 +15,11 @@ panel
 /*----html, body, container-----*/
 
 html, body{
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     margin:0;
-    padding:0;
-    
+    bottom:0;
 }
 
 body{
@@ -28,17 +27,20 @@ body{
     background-color: #ffffff;
     height: 100%;
     margin: 0;
-    padding: 0;
     width: 100%; /* full window width */
 }
+
+
 
 .container{
     width: 100%;
     padding: 0;
     margin-top: 30px;
-    min-height: 100%;
+    height: 100%;
     max-width: 100% !important;
+    
 }
+
 
 @media screen and (max-width: 767px) {
     body {
@@ -117,7 +119,9 @@ p.lead{
   display: none !important;
 }
 
-
+.navbar-inverse .navbar-nav>li>a {
+    color: #d9d9d9;
+}
 
 .fa.fa-bars{
    position: relative;        
@@ -127,10 +131,18 @@ p.lead{
 
 .navbar-brand{
     font-size: 1em;
+
 }
+
+.navbar-inverse .navbar-brand {
+    color: #d9d9d9;
+}
+
 
 .navbar.navbar-inverse.navbar-fixed-top{
     display: inline;
+    background-color: #546792;
+    border: #546792;
 }
 
 .navbar-brand{
@@ -195,6 +207,7 @@ p.lead{
 .jumbotron.jumbotron-fluid{
     width: 100%;
     height: 70vh;
+    top: 0;
     position:relative;
     z-index: -1;
     overflow:hidden;
@@ -436,12 +449,6 @@ a.text-muted1{
 /*--------------------dashboard--------------------*/
  
 
-/* custom template */
-html, body {
-   height: 100%;
-   font-family:'Open Sans',arial,sans-serif;
-}
-
 a {
   color:#222222;
 }
@@ -466,7 +473,7 @@ a {
 .column {
     height: 100%;
     overflow: auto;
-    *zoom:1;
+   
 }
 
 .column .padding {
@@ -474,15 +481,18 @@ a {
 }
 
 .box {
-    margin-top: 50px;
-  	bottom: 0; /* increase for footer use */
+    height: 100%;
+    margin-top: 2em;
+  	 /* increase for footer use */
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
+    bottom: 0;
     background-image:url('../images/march.jpg');
     background-size:cover;
     background-attachment:fixed;
+    
 }
 
 .divider {
@@ -519,6 +529,7 @@ a {
   text-decoration:none;
   text-shadow:.5em .5em #000000;
 }
+
 #sidebar-footer {
   position:absolute;bottom:5px;
 }
@@ -556,11 +567,10 @@ a {
 }
 
 
-     
 .column .padding {
     padding: .5em;
+    
 }
-
 
 #main.column.col-sm-7 {
     background-color: #eef3f7;
@@ -573,13 +583,12 @@ a {
     margin-top: 20px;
 }
 
-hr {
+hr{
     margin-top: 0px;
     margin-bottom: 0px;
     border: .1em solid #eef3f7;
     border-top: .1em solid #eef3f7;
     width: 100%;
-    
 }
 
 a.btn.btn-event{
@@ -647,7 +656,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    
+    height: 100%;
 }
 
 .img-size{
@@ -855,7 +864,7 @@ label {
 }
 
 .card-text3{
-    color: #0000b3;
+    color: #2f3a51;
     margin-bottom: .5em;
     margin-top: .5em;
     padding-bottom: .5em;
@@ -883,3 +892,36 @@ label {
 }
 
 
+/*-------------------Footer ----------------------------*/
+
+.footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7%;
+    background-color: #546792;
+}
+
+#copyright{
+    margin: 1em;
+    padding-top: .75em;
+    padding-bottom: .75em;
+    color: #e6e6e6;
+    text-align: center;
+    font-size: 70%;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.fa.fa-github{
+    font-size: 1.5em;
+    padding-left: .5em;
+    padding-top: .6em;
+    text-decoration: none;
+    color: #d9d9d9;
+}
+
+.fa.fa-github:hover{
+    color: #ffffff;
+}

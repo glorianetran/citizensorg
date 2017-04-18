@@ -1,6 +1,7 @@
 extend layout
 
-block content 
+block content
+  .container
     .container-margin(ng-cloak)
       each item in result
           .row
@@ -11,7 +12,7 @@ block content
           .row
             .col-lg-12
             
-              .card-group1.col-lg-7
+              .card-group1.col-lg-7.col-md-6.col-sm-8
                 .card
                  .card-block
                   h5.span1 Organizer
