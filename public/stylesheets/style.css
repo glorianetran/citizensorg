@@ -57,6 +57,7 @@ body{
     body {
         font-size: 140%;
     }
+    
 }
 
 /* md */
@@ -64,12 +65,18 @@ body{
     body {
         font-size: 140%;
     }
+    .button{
+        position: absolute; top: 45%; left: 50%;
+    }
 }
 
 /* lg */
 @media screen and (min-width: 1200px) {
     body {
         font-size: 160%;
+    }
+    .button{
+        position: absolute; top: 45%; left: 50%;
     }
 }
 
@@ -158,10 +165,12 @@ p.lead{
 
 .button{
     box-shadow: 2px 2px 8px #595959;
-    font-size: 50%;
+    text-transform: uppercase;
 	height: auto;
+	margin-top: 2%;
 	font-weight: normal;
-	padding: 6px 12px;
+    font-size: 65%;
+	padding: .4em .65em;
     border: 0;
     background: #ce0000;
     color: #fff;
@@ -277,10 +286,10 @@ p.lead{
 	outline: none;
 	background-color: #ce0000;
     color: #fff;
-	font-size: 14px;
+	font-size: 65%;
+	padding: .4em .65em;
 	height: auto;
 	font-weight: normal;
-	padding: 8px 14px;
 	text-transform: uppercase;
 	border-color: #4d0000;
 }
@@ -306,10 +315,10 @@ p.lead{
 	background-color: #ce0000;
 	outline: none;
 	color: #fff;
-	font-size: 16px;
+	font-size: 65%;
+	padding: .4em .65em;
 	height: auto;
 	font-weight: normal;
-	padding: 8px 14px;
 	text-transform: uppercase;
 	border-color: #4d0000;
 }
@@ -334,10 +343,10 @@ input[type=checkbox], input[type=radio] {
 	outline: none;
 	background-color: #ce0000;
     color: #fff;
-	font-size: 14px;
+	font-size: 65%;
+	padding: .4em .65em;
 	height: auto;
 	font-weight: normal;
-	padding: 8px 14px;
 	text-transform: uppercase;
 	border-color: #4d0000;
 }
@@ -576,7 +585,7 @@ hr {
 a.btn.btn-event{
      outline: none;
  	background-color: #ce0000;
-     color: #fff;
+    color: #fff;
  	font-size: 50%;
  	height: auto;
  	font-weight: normal;
@@ -589,7 +598,7 @@ a.btn.btn-event{
  a.btn.btn-event1{
      outline: none;
  	background-color: #ce0000;
-     color: #fff;
+    color: #fff;
  	font-size: 50%;
  	height: auto;
  	font-weight: normal;
@@ -691,7 +700,6 @@ span-date{
 }
 
 
-
 .span1{
     margin-bottom: .2em;
     margin-left: .2em;
@@ -737,10 +745,10 @@ panel
 	outline: none;
 	background-color: #ce0000;
     color: #fff;
-	font-size: 14px;
+	font-size: 65%;
+	padding: .4em .65em;
 	height: auto;
 	font-weight: normal;
-	padding: 8px 14px;
 	text-transform: uppercase;
 	border-color: #4d0000;
 }
