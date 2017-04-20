@@ -9,23 +9,23 @@ block content
             | Here are your Congress People
      
       .row    
-           each item in resultspage
-            .col-lg-4.col-sm-6
-             .card-group
-                .card
-                 .card-block
-                    h4.card-text1 #{JSON.stringify(item.Name).replace("\"", "").replace("\"", "")}
-                    h5.card-text2 #{JSON.stringify(item.Email).replace("\"", "").replace("\"", "")}
-                    h5.card-text2 #{JSON.stringify(item.Office).replace("\"", "").replace("\"", "")}
-                    h5.card-text2 #{JSON.stringify(item.Party).replace("\"", "").replace("\"", "")}-#{JSON.stringify(item.State).replace("\"", "").replace("\"", "")}
-                  .card-footer.card-text
-                    small.text-muted
-                     a.h5.card-link.i.fa.fa-twitter.icon-2x(href='http://twitter.com/#{JSON.stringify(item.Twitter).replace("\"", "").replace("\"", "")}', target='_blank') 
-                        if item.Twitter
-                            
-                     a.h4.card-link.btn.btn-event1(href='#{JSON.stringify(item.Website).replace("\"", "").replace("\"", "")}')
-                        if item.Website
-                            | Website
+       each item in resultspage
+        .col-lg-4.col-sm-6
+         .card-group
+            .card
+             .card-block
+                h4.card-text1 #{JSON.stringify(item.Name).replace("\"", "").replace("\"", "")}
+                h5.card-text2 #{JSON.stringify(item.Email).replace("\"", "").replace("\"", "")}
+                h5.card-text2 #{JSON.stringify(item.Office).replace("\"", "").replace("\"", "")}
+                h5.card-text2 #{JSON.stringify(item.Party).replace("\"", "").replace("\"", "")}-#{JSON.stringify(item.State).replace("\"", "").replace("\"", "")}
+              .card-footer.card-text
+                small.text-muted
+                 a.h5.card-link.i.fa.fa-twitter.icon-2x(href='http://twitter.com/#{JSON.stringify(item.Twitter).replace("\"", "").replace("\"", "")}', target='_blank') 
+                    if item.Twitter
+                        
+                 a.h4.card-link.btn.btn-event1(href='#{JSON.stringify(item.Website).replace("\"", "").replace("\"", "")}')
+                    if item.Website
+                        | Website
       .row
         .col-lg-12
                             

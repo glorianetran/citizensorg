@@ -1,14 +1,14 @@
 extend layout
 
 block content
-  .container
+ .container-special
    .wrapper(ng-cloak)
       .box
        .row
         // sidebar
-        #sidebar.column.col-sm-3.col-xs-12
-          ul.nav 
-            li.active
+        #sidebar.column.col-sm-3.col-md-3.col-xs-12
+          ul.nav
+            li
               a(href='/actionget' ng-show='isLoggedIn' ) Post Action
             li
               a(href='/dayactivity') Upcoming Actions
@@ -16,7 +16,7 @@ block content
             
         // /sidebar
         // main
-        #main.column.col-sm-7.col-xs-12
+        #main.column.col-sm-7.col-md-7.col-xs-12
           .padding
             .full.col-sm-9
               // content
@@ -44,23 +44,14 @@ block content
                       a.btn.btn-event(href='/detail/' + item._id) Event Details
                     
                         
-
+  
                 .row.divider
                   .col-sm-12
                     hr
-               
-      
+       
+    
+            
               
+            
                 
-              
-                  
-        //#calendar.column.col-sm-4
-          //.row
-            //.col-sm-12
-              //br
-              //iframe(src='https://calendar.google.com/calendar/embed?src=mills.edu_4bq72al4hsjup00sn9gqjsieic%40group.calendar.google.com&ctz=America/Los_Angeles', style='border: 0', width='500', height='500', frameborder='0', scrolling='no')
-            // /col-9
-          // /padding
-        // /main
-
-        
+    

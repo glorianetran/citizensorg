@@ -28,16 +28,19 @@ body{
     height: 100%;
     margin: 0;
     width: 100%; /* full window width */
+    line-height: 102%;
 }
-
-
 
 .container{
     width: 100%;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 0em;
     height: 100%;
     max-width: 100% !important;
+}
+
+.container-special{
+    height: 100vh;
 }
 
 
@@ -50,13 +53,25 @@ body{
     }
     #main.column.col-sm-7 {
         height: initial;
+        margin-bottom: 1.75em !important;
+    }
+    #sidebar a{
+    font-size: 80%;
+    text-align: center;
+    text-shadow: 2px 0 1px #000;
+    margin: 1em;
+    }
+    .box{
+        padding-bottom: 2em;
     }
 }
+  
+
 
 /* sm */
 @media screen and (min-width: 768px) {
     body {
-        font-size: 140%;
+        font-size: 120%;
     }
     #sidebar.column.col-sm-3.col-xs-12{
         font-size: 100%;
@@ -127,6 +142,10 @@ p.lead{
     color: #d9d9d9;
 }
 
+.nav {
+    padding: inherit;
+}
+
 .fa.fa-bars{
    position: relative;        
    color: white; 
@@ -147,6 +166,7 @@ p.lead{
     display: inline;
     background-color: #546792;
     border: #546792;
+    margin-bottom: 0;
 }
 
 .navbar-brand{
@@ -170,7 +190,7 @@ p.lead{
 .nav.navbar-nav{
     font-family: "Sans Pro", sans-serif;
     float: right;
-    font-size: 16px;
+    font-size: 75%;
 }
 
 
@@ -213,7 +233,7 @@ p.lead{
     height: 70vh;
     position:relative;
     z-index: -1;
-    overflow:hidden;
+    overflow: hidden;
     margin-bottom: 0px;
     margin-top: 0px;
     background-image: url(/images/citizensorg_homepage.jpg);
@@ -238,6 +258,10 @@ p.lead{
 
 .about{
     margin-top: .75em;  
+}
+
+p#description{
+    line-height: 150%;
 }
 
 /*------------------ Login and Sign Up-----------------*/
@@ -456,6 +480,10 @@ a {
   color:#222222;
 }
 
+#main.column.col-sm-7 {
+    padding-bottom: 1.75em !important;
+}
+
 .wrapper, .row {
    height: 100%;
    margin-left:0;
@@ -493,8 +521,9 @@ a {
     top: 0;
     bottom: 0;
     background-image:url('../images/march.jpg');
-    background-size:cover;
-    background-attachment:fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 2em;
 }
 
 .divider {
@@ -510,12 +539,14 @@ a {
   width:70px;
 }
 
+
 #sidebar, #sidebar a {
     margin-top: 15px;
     color:#ffffff;
     background-color:transparent;
 	text-shadow:1px 0 1px #333333;
 }
+
 #sidebar a.logo {
   display: block;
   padding: .2em;
@@ -530,6 +561,7 @@ a {
   text-align:center;
   text-decoration:none;
   text-shadow:.5em .5em #000000;
+  position: fixed;
 }
 
 #sidebar-footer {
@@ -564,9 +596,10 @@ a {
 
 #sidebar .nav { 
     margin: 0;
-    text-align: center;
-    display: inline-block;
+   
+    position: fixed;
 }
+
 
 
      
@@ -577,7 +610,7 @@ a {
 
 #main.column.col-sm-7 {
     background-color: #eef3f7;
-    padding-bottom: 0;
+    em2.5
 }
  
 .col-sm-9.full {
@@ -659,9 +692,12 @@ img {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 3em;
     height: 100%;
+    margin-bottom: 3em;
 }
+
+
 
 .img-size{
     height: 200px;
@@ -735,7 +771,6 @@ span-date{
     color: #e6e6e6;
     text-align: center;
     font-size: .50em;
-    
 }
 
 /*---------------------------input form------------------------*/
@@ -898,8 +933,22 @@ label {
 
 /*-------------------Footer ----------------------------*/
 
-.footer {
-    position: relative;
+wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
+    overflow: auto;
+    margin-bottom: 3em;
+}
+
+
+#push, footer {
+    height: 60px;
+}
+footer{
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
@@ -908,6 +957,13 @@ label {
     background-color: #546792;
 }
 
+@media (max-width: 767px) {
+    footer {
+      bottom:0;
+    }
+}
+
+      
 #copyright{
     margin: 1em;
     padding-top: .75em;
