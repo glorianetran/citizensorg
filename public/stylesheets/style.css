@@ -37,6 +37,7 @@ body{
     margin-top: 0em;
     height: 100%;
     max-width: 100% !important;
+    padding-bottom: 2em;
 }
 
 .container-special{
@@ -71,7 +72,7 @@ body{
 /* sm */
 @media screen and (min-width: 768px) {
     body {
-        font-size: 120%;
+        font-size: 150%;
     }
     #sidebar.column.col-sm-3.col-xs-12{
         font-size: 100%;
@@ -82,7 +83,7 @@ body{
 /* md */
 @media screen and (min-width: 992px) {
     body {
-        font-size: 140%;
+        font-size: 180%;
     }
     .button{
         position: absolute; top: 45%; left: 50%;
@@ -413,6 +414,7 @@ h1,h2,h3 {
 
 a.page-header {
   margin-top: 1.5em;
+  margin-bottom: .5em;
   padding-top: .5em;
   padding-left: .5em;
   width: 100%;
@@ -423,6 +425,7 @@ a.page-header {
 }
 
 .page-header1 {
+  margin-bottom: .5em;
   margin-top: 1.5em;
   padding-top: .5em;
   line-height: 2em;
@@ -715,7 +718,7 @@ img {
 .page-header3{
     margin-top: 1em;
     padding-bottom: .25em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     border-bottom:2px solid #5d74a2;
 }
 
@@ -912,7 +915,7 @@ label {
 .page-header4 {
     margin-top: 1em;
     padding-bottom: .25em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     border-bottom:2px solid #5d74a2;
     width: 95%;
     margin-left: auto;
@@ -965,13 +968,12 @@ footer{
 
       
 #copyright{
-    margin: 1em;
-    padding-top: .75em;
-    padding-bottom: .75em;
+    margin: .5em;
+    padding-bottom: 1em;
     color: #e6e6e6;
     text-align: center;
-    font-size: 70%;
-    font-family: "Helvetica Neue", sans-serif;
+    font-size: 50%;
+    font-family: "Sans Pro", sans-serif;
 }
 
 .fa.fa-github{
