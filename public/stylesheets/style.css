@@ -87,6 +87,9 @@ body{
     #sidebar.column1.col-sm-4.col-xs-12{
         font-size: 100%;
     }
+    h1.display-3{
+        margin-top: 50%;
+    }
 }
 
  
@@ -239,7 +242,7 @@ p.lead{
 
 .display-3{
     color: white;
-    margin-top: 7%;
+    margin-top: 10%;
 }
 
 .jumbotron.jumbotron-fluid{
