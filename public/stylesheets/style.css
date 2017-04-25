@@ -49,6 +49,9 @@ body{
     body {
         font-size: 110%;
     }
+     h1.display-3{
+        margin-top: 25%;
+    }
     .pull-right{
         line-height: 70%;
     }
@@ -87,9 +90,7 @@ body{
     #sidebar.column1.col-sm-4.col-xs-12{
         font-size: 100%;
     }
-    h1.display-3{
-        margin-top: 50%;
-    }
+  
 }
 
  
